@@ -9,9 +9,20 @@ html, body{
     background-color: #b9a394;
 }
 
-.foto{
+.main-container{
     border: 2px #818d92;
     border-radius: 25px;
     margin: 2rem;
     background-color: #d4c5c7;
+}
+
+nav{
+    border:2px solid #8254d6;
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+footer{
+    background-color: #dad4ef;
 }
