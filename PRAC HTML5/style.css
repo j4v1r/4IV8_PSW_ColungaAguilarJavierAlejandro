@@ -10,10 +10,10 @@ html, body{
 }
 
 .main-container{
-    border: 2px #818d92;
+    border: 2px red;
     border-radius: 25px;
     margin: 2rem;
-    background-color: #d4c5c7;
+    background-color: #818d92;
 }
 
 nav,footer{
