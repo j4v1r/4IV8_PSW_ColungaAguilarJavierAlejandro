@@ -24,9 +24,9 @@ section, article, footer, aside{
 }
 
 article, aside{
-    width: 40%;
+    width: 45%;
     display: inline-block;
-    height: 300px;
+    height: 85%;
     background-color: #B9A39A;
 }
 
