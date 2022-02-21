@@ -10,7 +10,7 @@ html, body{
 }
 
 .main-container{
-    border: 4px solid red;
+    border: 4px solid #DAD4EF;
     border-radius: 25px;
     margin: 2rem;
     background-color: #818d92;
@@ -27,9 +27,9 @@ article, aside{
     width: 40%;
     display: inline-block;
     height: 300px;
-    background-color: #9ABCA7;
+    background-color: #B9A39A;
 }
 
 footer{
-    background-color: #dad4ef;
+    background-color: #D4C5C7;
 }
