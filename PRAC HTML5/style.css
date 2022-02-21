@@ -16,7 +16,7 @@ html, body{
     background-color: #818d92;
 }
 
-nav, section, article, footer, aside{
+section, article, footer, aside{
     border:2px solid #8254d6;
     margin: 1rem;
     border-radius: 10px;
