@@ -16,14 +16,14 @@ html, body{
     background-color: #818d92;
 }
 
-nav, section, article, footer{
+nav, section, article, footer, aside{
     border:2px solid #8254d6;
     margin: 1rem;
     border-radius: 10px;
     padding: 1rem;
 }
 
-article{
+article, aside{
     width: 40%;
     display: inline-block;
     height: 300px;
