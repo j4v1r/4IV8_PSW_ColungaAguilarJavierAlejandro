@@ -1,11 +1,11 @@
 html, body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial;
     background-color: #D9D5DB;
 }
 
 .main{
     /*background-color: pink;*/
-    margin: 2rem;
+    margin: 5rem;
 }
 
 table,footer,.cara,.info{
@@ -15,6 +15,104 @@ table,footer,.cara,.info{
 section, footer{    
     margin: 0;    
 }
+
+section{
+    width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    /*background-color: black;*/
+}
+
+/*Tabla*/
+
+.curriculum{
+    width: 100%;
+    margin: 0;
+    /*background-color: green;*/   
+    
+}
+
+tbody,tr{
+    margin: 0;
+}
+
+
+/*Columna de la izquierda (.cara)*/
+
+.cara{
+    color: #F4F4F8;
+    text-align: left;
+    width: 30%;
+    background-image: url(../PRAC\ HTML5/imagenes/fondo1.jpg);
+    background-size: cover;
+}
+
+.cara p, .cara h3, .cara ul{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.cara hr{
+    height: 1px;
+    background-color: #F4F4F8;
+    width: 85%;
+}
+
+/*Donde esta mi foto*/
+.button{
+    margin-top: 1rem;
+    text-align:center;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/*Columna de espacio*/
+
+.espacio{
+    width: 1%; 
+}
+
+
+/*Columna de la derecha*/
+
+.info{
+    margin-top: 0;
+    font-family: Arial;
+    margin: 0%;
+    width: 69%;
+    background-image: url(../PRAC\ HTML5/imagenes/fondo2.jpg);
+    background-size: cover;
+}
+
+.name, .lastname{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #009FB7;
+    font-size: 40px; 
+}
+
+.info h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1rem;
+}
+
+.info p{
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 1rem;
+}
+
+.info hr{
+    height: 2px;
+    background-color:  #009FB7;
+    width: 97%;
+}
+
+/*Footer*(no se si lo voy a usar*/
 
 footer{
     align-items: center;
@@ -38,41 +136,10 @@ footer{
     width: 20%;
 }
 
-section{
-    width: 100%;
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 1rem;
-    /*background-color: black;*/
-}
 
-.curriculum{
-    width: 100%;
-    margin: 0;
-    /*background-color: green;*/   
-    
-}
 
-tbody,tr{
-    margin: 0;
-}
-
-.cara{
-    text-align: left;
-    width: 30%;
-    background-color: #009FB7;
-}
-
-.button{
-    margin-top: 1rem;
-    text-align:center;
-    text-transform: uppercase;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
 h1{
-    
     text-align: left;
     margin-left: 1rem;
     margin-top: 1rem;
@@ -81,32 +148,3 @@ h1{
 h4{
     text-align: center;
 }
-
-.cara p{
-    margin-left: 10px;
-}
-
-.espacio{
-    width: 1%; 
-}
-
-.info{
-    font-family: Arial;
-    margin: 0%;
-    width: 69%;
-    background-color:  #F4F4F8;
-}
-
-hr{
-    height: 1px;
-    background-color:  #009FB7;
-    width: 95%;
-}
-
-.name{
-    margin-left: 1rem;
-    color: #009FB7;
-    font-size: 40px; 
-}
-
-
