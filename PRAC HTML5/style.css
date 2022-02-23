@@ -5,10 +5,12 @@ html, body{
 
 .main{
     /*background-color: pink;*/
-    margin: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 3rem;
 }
 
-table,footer,.cara,.info{
+footer,.cara,.info{
     border-radius: 10px;
 }
 
@@ -34,7 +36,7 @@ section{
     
 }
 
-tbody,tr{
+.curry,tr{
     margin: 0;
 }
 
@@ -55,6 +57,7 @@ tbody,tr{
 }
 
 .cara hr{
+    margin-top: 30px;
     height: 1px;
     background-color: #F4F4F8;
     width: 85%;
@@ -62,7 +65,7 @@ tbody,tr{
 
 /*Donde esta mi foto*/
 .button{
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align:center;
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -79,15 +82,28 @@ tbody,tr{
 /*Columna de la derecha*/
 
 .info{
-    margin-top: 0;
+    vertical-align: text-top;
+    margin-top: 1rem;
     font-family: Arial;
     margin: 0%;
     width: 69%;
-    background-image: url(../PRAC\ HTML5/imagenes/fondo2.jpg);
-    background-size: cover;
+    background-color: #F4F4F8;
 }
 
-.name, .lastname{
+.name{
+    margin-left: 1.2rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #009FB7;
+    font-size: 40px; 
+}
+
+.lastname{
+    margin-left: 1.2rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
     margin-top: 0;
     margin-bottom: 0;
     color: #009FB7;
@@ -95,15 +111,15 @@ tbody,tr{
 }
 
 .info h2{
-    margin-top: 0;
+    margin-top: 15px;
     margin-bottom: 0;
-    margin-left: 1rem;
+    margin-left: 1.2rem;
 }
 
 .info p{
     margin-top: 10px;
     margin-right: 20px;
-    margin-left: 1rem;
+    margin-left: 1.2rem;
 }
 
 .info hr{
@@ -127,7 +143,7 @@ footer{
 .rs{
     height: 100%;
     width: 100%;
-    background-color: aqua;
+    /*background-color: aqua;*/
     margin: 0;
 }
 
@@ -136,6 +152,11 @@ footer{
     width: 20%;
 }
 
+.b{
+ 
+    background-position: right bottom;
+    background-blend-mode: lighten;
+}
 
 
 
