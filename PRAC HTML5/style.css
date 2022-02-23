@@ -60,20 +60,26 @@ tbody,tr{
 
 .cara{
     text-align: left;
-    width: 25%;
-    background-color: #EBE9EC;
+    width: 30%;
+    background-color: #009FB7;
 }
 
 .button{
-    margin-top: 5px;
+    margin-top: 1rem;
     text-align:center;
     text-transform: uppercase;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-h3{
-    text-align: center;
+h1{
+    
+    text-align: left;
+    margin-left: 1rem;
     margin-top: 1rem;
+}
+
+h4{
+    text-align: center;
 }
 
 .cara p{
@@ -81,16 +87,26 @@ h3{
 }
 
 .espacio{
-    width: 1%;
-    
+    width: 1%; 
 }
 
 .info{
+    font-family: Arial;
     margin: 0%;
-    width: 74%;
-    background-color:  #EBE9EC;
+    width: 69%;
+    background-color:  #F4F4F8;
 }
 
+hr{
+    height: 1px;
+    background-color:  #009FB7;
+    width: 95%;
+}
 
+.name{
+    margin-left: 1rem;
+    color: #009FB7;
+    font-size: 40px; 
+}
 
 
