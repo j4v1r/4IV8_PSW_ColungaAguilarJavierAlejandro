@@ -1,54 +1,67 @@
-
 html, body{
-    background-color: #586a6a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #D9D5DB;
 }
 
-/*.main-container{
-    border: 4px solid #DAD4EF;
-    border-radius: 25px;
+.main{
+    /*background-color: pink;*/
     margin: 2rem;
-    background-color: #818d92;
-}*/
-
-/*section{
-    border:2px solid #FEFFBE;
-    margin:20px;
-    border-radius: 10px;
-    padding: 1rem;
-}*/
-
-footer{
-    margin: 20px;
-    
-    padding: 1rem;
-    background-color: #D4C5C7;
 }
 
 table,footer,.cara,.info{
     border-radius: 10px;
 }
-table{
-    
-    margin: 1rem;
-    padding: 0;
-    width: 96%;
+
+section, footer{    
+    margin: 0;    
+}
+
+footer{
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    background-color: purple;
+}
+
+.rs{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+    margin: 0;
+}
+
+.a,.b,.c,.d,.e{
+    text-align: center;
+    width: 20%;
+}
+
+section{
+    width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    /*background-color: black;*/
+}
+
+.curriculum{
+    width: 100%;
+    margin: 0;
+    /*background-color: green;*/   
     
 }
 
 tbody,tr{
-    margin: 0%;
-    margin-left: 0px;
+    margin: 0;
 }
 
 .cara{
     text-align: left;
-    width: 30%;
-    background-color: red;
-}
-.info{
-    margin: 0%;
-    width: 70%;
-    background-color:  blue;
+    width: 25%;
+    background-color: #EBE9EC;
 }
 
 .button{
@@ -60,9 +73,24 @@ tbody,tr{
 
 h3{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .cara p{
     margin-left: 10px;
 }
+
+.espacio{
+    width: 1%;
+    
+}
+
+.info{
+    margin: 0%;
+    width: 74%;
+    background-color:  #EBE9EC;
+}
+
+
+
+
