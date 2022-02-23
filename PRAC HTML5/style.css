@@ -153,7 +153,7 @@ footer{
 }
 
 .b{
- 
+    background-image: url(../PRAC\ HTML5/imagenes/face.png);
     background-position: right bottom;
     background-blend-mode: lighten;
 }
