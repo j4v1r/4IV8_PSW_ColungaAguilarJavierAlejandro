@@ -131,31 +131,26 @@ section{
 /*Footer*(no se si lo voy a usar*/
 
 footer{
+    vertical-align: top;
     align-items: center;
+    margin: 0;
+    height: %;
     width: 100%;
-    padding-top: 1rem;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 1rem;
-    background-color: purple;
+    padding:0;
 }
 
 .rs{
+    vertical-align: top;
     height: 100%;
     width: 100%;
     /*background-color: aqua;*/
     margin: 0;
 }
 
-.a,.b,.c,.d,.e{
+.rs td{
+    height: 100%;
     text-align: center;
     width: 20%;
-}
-
-.b{
-    background-image: url(../PRAC\ HTML5/imagenes/face.png);
-    background-position: right bottom;
-    background-blend-mode: lighten;
 }
 
 
