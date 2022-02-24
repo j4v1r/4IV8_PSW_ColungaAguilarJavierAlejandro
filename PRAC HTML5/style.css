@@ -33,11 +33,6 @@ section{
     width: 100%;
     margin: 0;
     /*background-color: green;*/   
-    
-}
-
-.curry,tr{
-    margin: 0;
 }
 
 
@@ -79,7 +74,7 @@ section{
 }
 
 
-/*Columna de la derecha*/
+/*Columna de la derecha (.info)*/
 
 .info{
     vertical-align: text-top;
@@ -128,14 +123,15 @@ section{
     width: 97%;
 }
 
-/*Footer*(no se si lo voy a usar*/
+
+/*Footer*/
 
 footer{
-    border
+    
+    text-align: center;
     vertical-align: top;
     align-items: center;
     margin: 0;
-    height: %;
     width: 100%;
     padding:0;
 }
@@ -152,16 +148,4 @@ footer{
     height: 100%;
     text-align: center;
     width: 20%;
-}
-
-
-
-h1{
-    text-align: left;
-    margin-left: 1rem;
-    margin-top: 1rem;
-}
-
-h4{
-    text-align: center;
 }
