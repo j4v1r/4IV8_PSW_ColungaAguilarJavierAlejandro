@@ -1,8 +1,9 @@
 html,body{
     margin: 0;
     padding: 0;
-    background-image: url(../imagenes/fondo.png);
-    background-size:cover;
+    background-color: transparent;
+    /*background-image: url(../imagenes/fondo.png);
+    background-size:cover;*/
 }
 
 .logo{
@@ -30,12 +31,12 @@ html,body{
 
 
 .main-container{
+    width: 215rem;
+    height: 90rem;
+    background-image: url(../imagenes/fondo3.jpg);
     margin: 0;
     padding: 0;
-    display: block;
-    box-sizing: border-box;
-
-    background-color: green;
+    background-size:contain;
 }
 
 
