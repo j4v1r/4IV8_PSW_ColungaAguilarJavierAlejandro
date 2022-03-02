@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 html,body{
-    background-image: url(../imagenes/fondo4.jpg);
+    
     font-family: "Orbitron",sans-serif;
     margin: 0;
     padding: 0;
     background-color: transparent;
     /*background-image: url(../imagenes/fondo.png);*/
-    background-size:cover;
+    
 }
 
 /*Menu/Parte de arriba*/
@@ -44,43 +44,56 @@ html,body{
 /*Aquí ya hay que poner lo chido*/
 
 .main-container{
+    background-image: url(../imagenes/fondo5.jpg);
     padding-top: 2rem;
-    margin: 0;
-    
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-size:cover;
     font-size:medium;
     
 }
 
 .main-container h2{
+    color: white;
     padding-top: 1rem;
     padding-left: 2rem;
 }
 
 .main-container p{
     padding-left: 2rem;
-    color: white;
-    padding-right: 14rem;
+    color: black;
+    padding-right: 8rem;
 }
 
 .main-container h1{
-    color: white;
+    color: black;
     text-align: center;
 }
 
 /*Tabla de nuevas entrgas  https://stackoverflow.com/questions/22592064/how-to-align-text-below-an-image-in-css */
 
 .entregas{
+    margin-top: 0;
+    padding-top: 0;
     text-align: center;
     width: 90%;
     margin: auto;
-    background-color: red;
+    background-color: transparent;
 }
 
 .entregas td{
-    width: 20%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    width: 25%;
 }
 
-.textos{
+span{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: white;
     display: block;
 }
 
@@ -96,9 +109,15 @@ html,body{
     text-align: center;
     vertical-align: top;
     align-items: center;
-    margin: 0;
+    margin-top: 0;
     width: 100%;
-    padding:0;
+    padding-top:0;
+}
+
+.sociales p{
+    padding-top: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .rs{

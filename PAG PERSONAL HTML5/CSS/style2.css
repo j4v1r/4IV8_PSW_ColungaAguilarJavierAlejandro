@@ -61,7 +61,7 @@ html,body{
 /*Footer*/
 
 .sociales{
-    position: relative;
+    position: fixed;
     bottom: 0;
     color: white;
     background-color: #1E3163;
@@ -74,8 +74,8 @@ html,body{
 }
 
 .sociales p{
-    font-size: x-large;
-
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .rs{
