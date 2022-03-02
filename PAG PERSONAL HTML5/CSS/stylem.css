@@ -19,7 +19,26 @@ html,body{
     margin: 0;
     width: 100%;
     height: 11.5rem;
-    background-color: #1E3163;
+    background-color: #e17218;
+    animation: cambio_loco 5s alternate infinite;
+}
+
+@keyframes cambio_loco {
+    0% {
+		background: #de7017;
+	}
+	25% {
+		background: #e17218;
+	}
+	50% {
+		background: #a65411;
+	}
+	75% {
+		background: #b95e13;
+	}
+	100% {
+		background: #cb6715;
+	}
 }
 
 .loslinks{
@@ -33,6 +52,11 @@ html,body{
     padding: 0;
     margin: 0;
     background-color:#e17218;
+}
+
+.loslinks td{
+    text-align: center;
+    width: 20%;
 }
 
 
@@ -63,8 +87,8 @@ html,body{
 .sociales{
     position: fixed;
     bottom: 0;
-    color: white;
-    background-color: #1E3163;
+    color: black;
+    background-color: transparent;
     text-align: center;
     vertical-align: top;
     align-items: center;
@@ -74,7 +98,7 @@ html,body{
 }
 
 .sociales p{
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     margin-top: 0;
     margin-bottom: 0;
 }
