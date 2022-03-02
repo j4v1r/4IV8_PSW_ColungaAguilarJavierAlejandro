@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 html,body{
-    
+    background-image: url(../imagenes/fondom.jpg);
     font-family: "Orbitron",sans-serif;
     margin: 0;
     padding: 0;
-    background-color: transparent;
-    /*background-image: url(../imagenes/fondo.png);*/
-    
+    background-size:cover;
 }
 
 /*Menu/Parte de arriba*/
@@ -44,13 +42,10 @@ html,body{
 /*Aquí ya hay que poner lo chido*/
 
 .main-container{
-    background-image: url(../imagenes/fondo6.jpg);
     padding-top: 2rem;
     padding-bottom: 0;
-    margin-bottom: 0;
-    background-size:cover;
-    font-size:medium;
-    
+    margin-bottom: 0;   
+    font-size:medium;  
 }
 
 .main-container h2{
@@ -71,7 +66,7 @@ html,body{
     text-align: center;
 }
 
-/*Tabla de nuevas entrgas  https://stackoverflow.com/questions/22592064/how-to-align-text-below-an-image-in-css */
+/*Tabla de nuevas entregas  https://stackoverflow.com/questions/22592064/how-to-align-text-below-an-image-in-css */
 
 .entregas{
     margin-top: 0;
