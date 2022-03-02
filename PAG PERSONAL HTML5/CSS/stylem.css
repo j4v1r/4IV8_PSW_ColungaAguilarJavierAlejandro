@@ -10,6 +10,15 @@ html,body{
     background-size:cover;
 }
 
+a:link, a:visited{
+    color: black;
+}
+
+a:active{
+    color: white;
+}
+
+
 /*Menu/Parte de arriba*/
 
 .logo{  
