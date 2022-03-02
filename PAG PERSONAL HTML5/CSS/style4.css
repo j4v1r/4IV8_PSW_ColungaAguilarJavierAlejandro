@@ -32,7 +32,7 @@ html,body{
     align-items: center;
     padding: 0;
     margin: 0;
-    background-color:#2D46B9;
+    background-color:#e17218;
 }
 
 .loslinks td{
@@ -44,7 +44,7 @@ html,body{
 /*Aquí ya hay que poner lo chido*/
 
 .main-container{
-    background-image: url(../imagenes/fondo5.jpg);
+    background-image: url(../imagenes/fondo6.jpg);
     padding-top: 2rem;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -54,14 +54,15 @@ html,body{
 }
 
 .main-container h2{
-    color: white;
+    color: black;
     padding-top: 1rem;
     padding-left: 2rem;
 }
 
 .main-container p{
     padding-left: 2rem;
-    color: black;
+    color: white;
+    font-size: large;
     padding-right: 8rem;
 }
 
@@ -84,15 +85,16 @@ html,body{
 .entregas td{
     margin-top: 1rem;
     padding-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     width: 25%;
 }
 
 span{
+    font-size: medium;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: white;
     display: block;
 }
