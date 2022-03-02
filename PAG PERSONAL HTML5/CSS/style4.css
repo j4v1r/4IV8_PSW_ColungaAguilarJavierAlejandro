@@ -10,6 +10,8 @@ html,body{
     background-size:cover;
 }
 
+/*Menu/Parte de arriba*/
+
 .logo{  
     text-align: center;
     padding: 0;
@@ -31,4 +33,85 @@ html,body{
     padding: 0;
     margin: 0;
     background-color:#2D46B9;
+}
+
+.loslinks td{
+    text-align: center;
+    width: 20%;
+}
+
+
+/*Aquí ya hay que poner lo chido*/
+
+.main-container{
+    padding-top: 2rem;
+    margin: 0;
+    
+    font-size:medium;
+    
+}
+
+.main-container h2{
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+
+.main-container p{
+    padding-left: 2rem;
+    color: white;
+    padding-right: 14rem;
+}
+
+.main-container h1{
+    color: white;
+    text-align: center;
+}
+
+/*Tabla de nuevas entrgas  https://stackoverflow.com/questions/22592064/how-to-align-text-below-an-image-in-css */
+
+.entregas{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    background-color: red;
+}
+
+.entregas td{
+    width: 20%;
+}
+
+.textos{
+    display: block;
+}
+
+
+
+/*Footer*/
+
+.sociales{
+    position:relative;
+    bottom: 0;
+    color: white;
+    background-color: #1E3163;
+    text-align: center;
+    vertical-align: top;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    padding:0;
+}
+
+.rs{
+    vertical-align: top;
+    height: 100%;
+    width: 100%;
+    /*background-color: aqua;*/
+    margin: 0;
+}
+
+.rs td{
+    /*background-color: aqua;*/
+    height: 100%;
+    text-align: center;
+    width: 33.33%;
 }
