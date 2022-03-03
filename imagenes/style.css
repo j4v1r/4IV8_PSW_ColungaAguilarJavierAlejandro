@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+html{
+    background-image: url(../imagenes/fondo.jpg) ;
+    background-size: cover;
+}
+
+body{
+    font-family: "Orbitron",sans-serif;
+    text-align: center;
+    color: #23315d;
+}
+
+h1{
+    color: black;
+}
+a:link, a:visited{
+    color: white;
+}
+
+a:active{
+    color: black;
+}
