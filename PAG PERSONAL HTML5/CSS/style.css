@@ -86,7 +86,7 @@ a:active{
 .main-container h2{
     padding-left: 6rem;
     text-align: left;
-    padding-top: 0.5rem;
+    padding-top: 2rem;
     padding-bottom: 0.5rem;
 }
 
@@ -95,6 +95,19 @@ a:active{
     color: white;
     padding-right: 5rem;
     padding-bottom: 1rem;
+}
+
+.productos{
+    margin-bottom: 5rem;
+    margin-left: 10rem;
+    align-items: center;
+    text-align: center;
+}
+
+.productos td{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 25%;
 }
 
 

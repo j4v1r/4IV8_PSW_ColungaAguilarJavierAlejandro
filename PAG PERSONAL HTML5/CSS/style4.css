@@ -96,6 +96,7 @@ a:active{
 /*Tabla de nuevas entregas  https://stackoverflow.com/questions/22592064/how-to-align-text-below-an-image-in-css */
 
 .entregas{
+    margin-bottom: 5rem;
     margin-top: 0;
     padding-top: 0;
     text-align: center;
