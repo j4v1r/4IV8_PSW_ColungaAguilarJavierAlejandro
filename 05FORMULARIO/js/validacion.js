@@ -43,12 +43,13 @@ function validar(formulario){
         }
     }
 
-
     if(!allValido){
         alert("Escriba unicamente letras en el campo de nombre");
         formulario.nombre.focus();
         return false;
     }
+
+    
 
     var checkOK="0123456789";
     var checkStr=formulario.edad.value;

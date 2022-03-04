@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <script src="js/validacion.js"></script>
+</head>
+<body>
+    <div class="formulario">
+
+        <form method="post" name="examen" onsubmit="return validar(this)" action="">
+
+            <br>
+            <p>
+                <br>
+                <label>Valor de automóvil (100,000 - 1,000,000): </label>
+                <br>
+                <input type="text" name="valor" id="valor">
+                <br>
+                <label>Cuota inicial (mínima del 10% del valor del automóvil): </label>
+                <br>
+                <input type="text" name="cuotain" id="cuotain">
+                <br>
+                <label>Periodo: </label>
+                <br>
+                <input type="text" name="periodo" id="periodo">
+                <br>
+            </p>
+            
+            <br>
+                <input type="submit" name="enviar" value="Enviar Datos">
+                <br>
+                <input type="reset" name="borrar" value="Borrar datos">
+    
+        </form>
+
+    </div>
+    
+    
+    
+</body>
+</html>
