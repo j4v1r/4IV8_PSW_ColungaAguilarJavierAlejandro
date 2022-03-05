@@ -1,0 +1,55 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: aquamarine;
+}
+
+.superior{
+  padding: 1rem;
+  text-align: center;
+  background-color: blueviolet;
+}
+
+.superior h1{
+  margin: 0;
+}
+
+.conteiner-form{
+
+  padding-bottom: 0.5rem;
+  margin: auto;
+  width: 50%;
+  background-color: grey;
+  align-items: center;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  padding-top: 2rem;
+  table-layout: fixed;
+  width: 50%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+  
+table td{
+  width: 20;
+}
+
+.tabla{
+  margin-top: 2rem;
+}
+
+  .datos{ 
+    position:fixed;
+    bottom: 0;
+    color: black;
+    background-color: red;
+    text-align: center;
+    vertical-align: top;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    padding-top: 2rem;
+}

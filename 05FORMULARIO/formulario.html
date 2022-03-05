@@ -7,51 +7,49 @@
     <title>Formulario</title>
     <script src="js/validacion.js"></script>
 </head>
-    <body>
-        <div class="conteinern-form">
-            <form method="post" name="formulario" 
-            onsubmit="return validar(this)" action="">
-                <br>
-                <p>Todos los formularios de la web manejan 
-                    metodos para poder enviar o recibir información,
-                    a los mas comunes son: 
+<body>
+    <div class="conteinern-forms">
+        <form method="get" name="formulario" onsubmit="return validar(this)" action="">
+            <br>
+            <p>
+                Todos los formularios  de la web manejan 
+                metodos para poder enviar o recibir inofrmacion,
+                los mas comunes son:
 
-                    <h1>GET:</h1> este metodo se encarga de enviar la informacion
-                    por la URL o salida estandar del navegador, esta propicia 
-                    de la informacion no exista ya que es visible.
-                    <br>
-                    <h2>POST: este metodo se encarga de enviar la informacion
-                        oculta que nos ofrece cierto nivel de seguridad en la base de 
-                        datos
-                    </h2>
-                    <br>
-                    <label>Nombre: </label>
-                    <br>
-                    <input type="text" name="nombre" id="nombre">
-                    <br>
-                    <label>Edad: </label>
-                    <br>
-                    <input type="text" name="edad" id="edad">
-                    <br>
-                    <label>Email: </label>
-                    <br>
-                    <input type="text" name="email" id="email">
-                </p>
-                <br>
-                <input type="submit" name="enviar" value="Enviar Datos">
-                <br>
-                <input type="reset" name="borrar" value="Borrar datos">
-            </form>    
+            <h1>GET:</h1> este metodo se encarga de enviar la inofrmacion
+            por la URL o salida estandar del navegador, esto propicia que 
+            de la informacion no exista y es visible
+            <br>
+            <h2>POST: este metodo se emcarga de enviar la informacion 
+                oculta qie nos ofrece cierto nivel de seguridad en la base de datos
+            </h2>
+            <br>
+            <label>Nombre: </label>
+            <input type="text" name="nombre" id="nombre">
+            <br>
+            <label>Edad</label>
+            <input type="text" name="edad" id="edad">
+            <br>
+            <label>E-mail</label>
+            <input type="text" name="email" id="email">
+        </p>
+        <br>
+        <input type="submit" name="enviar un valor" value="Enviar Datos">
+        <br>
+        <input type="reset" name="borrar" value="Borrar datos">
+        </form>
+
         
+    </div>
 
-        <div>
-            <table border=1 id="tabla" name="table">
+    <div>
+            <table id="Tabla" name="table">
                 <thead>
                     <tr>
                         <th>Capital</th>
                         <th>Periodo</th>
                         <th>Interes</th>
-                        <th>Amortización</th>
+                        <th>Amortizacion</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,7 +62,5 @@
                 </tbody>
             </table>
         </div>
-    </div>
-    
-    </body>
+</body>
 </html>
