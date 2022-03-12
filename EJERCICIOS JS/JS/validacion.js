@@ -73,10 +73,13 @@ function ventan(){
     var comision3 = vent3*0.1;
     var total3 = vent3+comision3;
 
+    //Comisiones
+    var com = total1 + total2 + total3;
 
     //Ingreso final
     var full = sueldo + total1 + total2 + total3;
 
+    document.formulario2.comisionI.value = "$" + com;
     document.formulario2.ingresoI.value = "$" + full;
 }
 
@@ -86,6 +89,7 @@ function borrar2n(){
     document.formulario2.venta1.value = " ";
     document.formulario2.venta2.value = " ";
     document.formulario2.venta3.value = " ";
+    document.formulario2.comisionI.value = " ";
     document.formulario2.ingresoI.value = " ";
 
 }
