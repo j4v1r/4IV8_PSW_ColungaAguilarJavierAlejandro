@@ -1,0 +1,54 @@
+html, body{
+    background-color: #FFC300;
+    text-align: center;
+}
+
+hr{
+    background-color: #C70039;
+    height: 0.5rem;
+    width: 95%;
+    border-radius: 1rem;
+    border: 0;
+    margin-bottom: 2rem;
+}
+
+.index{
+    font-size: large;
+    padding: 1rem;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: #900C3F 5px solid;
+    border-radius: 1.5rem;
+}
+
+.index td{
+    padding: 0.5rem;
+}
+
+.forms, .forms2{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2rem;
+    width: 90%;
+    font-size: large;
+    border-radius: 25px;
+    padding: 1rem;
+    background-color: #FF5733;
+    text-align: left;
+}
+
+.form1, .form2{
+    margin-left: 1rem;
+}
+
+.esp{
+    width: 0.7rem;
+}
+
+.esp2{
+    width: 0.1rem;
+}
