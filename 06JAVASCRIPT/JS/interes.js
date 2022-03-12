@@ -30,9 +30,10 @@ function interes(){
     document.formulario1.sueldoI.value = "$" + total;
 }
 
-function borrar(){
+//borrar() no funciona, sino borrarn(), ¿por que? quien sabe
+function borrarn(){
 
-    document.formulario1.sueldoI.value = "";
-    document.formulario1.cantidad.value = "";
-
+    document.formulario1.cantidad.value = " ";
+    document.formulario1.sueldoI.value = " ";
+    
 }
