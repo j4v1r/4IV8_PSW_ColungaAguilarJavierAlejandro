@@ -5,41 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-
     <title>Ejercicios de JS</title>
 </head>
 <body>
 
     <form  action="" name="formulario1" method="post">
 
-        <label for="">Debera de ingresar una cantidad para invertir en el banco Gatitos y Patitos SA a razón de 2.5 anual</label>
+        <label for="">Debera de ingresar una cantidad para invertir en 
+        el banco Gatitos y Patitos SA a razón de 2.5% anual</label>
+
+
         <table>
 
             <tr>
                 <td>Introduce la cantidad a invertir: </td>
 
-                <td><input type="text" name="cantidad" onkeypress=""></td>
+                <td><input type="text" name="cantidad" onkeypress="return 
+                validarn(event)"></td>
             </tr>
+
 
             <tr>
                 <td></td>
 
-                <td><input type="button" value="Interes" onclick="interes()"></td>
+                <td><input type="button" value="Interes" 
+                onclick="interes()"></td>
             </tr>
+
 
             <tr>
                <td>Su saldo total con el interes de 2.5 es: </td> 
 
-               <td><input type="text" name="sueldoI" id="cantidadI" readonly="readonly" class="input_text"></td>
+               <td><input type="text" name="sueldoI" id="cantidadI" 
+                readonly="readonly" class="input_text"></td>
             </tr>
+
+
             <tr>
                 <td></td>
-                <td><input type="button" name="borrar" value="Borrar Datos" onclick="borrar()"></td>
+
+                <td><input type="button" name="borrar" 
+                value="Borrar Datos" onclick="borrar()"></td>
             </tr>
 
         </table>
 
     </form>
+    <script src="JS/interes.js"></script>
 
 </body>
 </html>
