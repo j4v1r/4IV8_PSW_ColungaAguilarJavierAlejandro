@@ -93,3 +93,70 @@ function borrar2n(){
     document.formulario2.ingresoI.value = " ";
 
 }
+
+
+//Formulario 3
+
+function descuenton(){
+
+    var final = document.formulario3.montof.value;
+    var montf = parseFloat(final);
+    var desc = montf*0.85;
+
+    document.formulario3.descuentoI.value = "$" + desc;
+
+}
+
+function borrar3n(){
+
+    document.formulario3.montof.value = " ";
+    document.formulario3.descuentoI.value = " ";
+}
+
+
+//Formulario 4
+
+function califn(){
+
+    //Parciales
+    var calif1 = document.formulario4.parc1.value;
+    var calif2 = document.formulario4.parc2.value;
+    var calif3 = document.formulario4.parc3.value;
+
+    var cali1 = parseFloat(calif1);
+    var cali2 = parseFloat(calif2);
+    var cali3 = parseFloat(calif3);
+
+    var parcsum = cali1+cali2+cali3;
+
+    var parcs = (parcsum*5.5)/30;
+
+    //Examen Final
+    var examen = document.formulario4.examf.value;
+
+    var exam = parseFloat(examen);
+
+    var califexa = (exam*3)/10;
+    
+    //Trabajo Final
+    var trab = document.formulario4.trabf.value;
+
+    var trabf = parseFloat(trab);
+
+    var trabfin = (trabf*1.5)/10;
+
+    //Calificación Final
+    var calif = parcs+califexa+trabfin;
+
+    document.formulario4.califI.value = calif;
+}
+
+function borrar4n(){
+
+    document.formulario4.parc1.value = " ";
+    document.formulario4.parc2.value = " ";
+    document.formulario4.parc3.value = " ";
+    document.formulario4.examf.value = " ";
+    document.formulario4.trabf.value = " ";
+    document.formulario4.califI.value = " ";
+}

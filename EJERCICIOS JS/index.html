@@ -25,19 +25,19 @@
         </tr>
 
         <tr>
-            <td>2. Ingresos Total, Sueldo + Comisiones</td>
+            <td><a href="#form2">2. Ingresos Total, Sueldo + Comisiones</a></td>
         </tr>
 
         <tr>
-            <td>3. Descuento en Tienda de 15%</td>
+            <td><a href="#form3">3. Descuento en Tienda de 15%</a></td>
         </tr>
 
         <tr>
-            <td>4. Calificación Final Algoritmos</td>
+            <td><a href="#form4">4. Calificación Final "Algoritmos"</a></td>
         </tr>
 
         <tr>
-            <td>5. Porcentaje Hombre y Mujeres</td>
+            <td><a href="#form5">5. Porcentaje Hombre y Mujeres</a></td>
         </tr>
 
         <tr>
@@ -50,155 +50,372 @@
 
 
     <div class="forms" id="form1"> 
-
         <!-- Suponga que un individuo desea invertir
-        su capital en un banco y desea saber cuanto
-        dinero ganara después de un mes si el banco
-        paga a razón de 2% mensual -->
+    su capital en un banco y desea saber cuanto
+    dinero ganara después de un mes si el banco
+    paga a razón de 2% mensual -->
         
-    <form  action="" name="formulario1" method="post">
+        <form  action="" name="formulario1" method="post">
 
-        <label for="">Inversión Bancaria Mensual del 2%</label>
-        <br>
-        <br>
-        <table class="form1">
+            <label for="">Inversión Bancaria Mensual del 2%</label>
+            <br>
+            <br>
+            <table class="form1">
 
-            <tr>
-                <td>Introduce la cantidad a invertir: </td>
+                <tr>
+                    <td>Introduce la cantidad a invertir: </td>
+                    <td class="esp"></td>
+                    <td><input type="text" name="cantidad" 
+                    onkeypress="validarn(event)"></td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td class="esp"></td>
+                    <td><input type="button" value="Calcular Beneficio" 
+                    onclick="interes()"></td>
+                </tr>
+
+
+                <tr>
+                <td>Su saldo total con el interes del 2% es: </td> 
                 <td class="esp"></td>
-                <td><input type="text" name="cantidad" 
-                onkeypress="validarn(event)"></td>
-            </tr>
+                <td><input type="text" name="sueldoI" 
+                    readonly="readonly" class="input_text"></td>
+                </tr>
 
 
-            <tr>
-                <td></td>
-                <td class="esp"></td>
-                <td><input type="button" value="Calcular Beneficio" 
-                onclick="interes()"></td>
-            </tr>
+                <tr>
+                    <td></td>
+                    <td class="esp"></td>
+                    <td> <input type="button" name="borrar" 
+                    value="Borrar Datos" onclick="borrarn()"> </td>
+                </tr>
 
+            </table>
 
-            <tr>
-               <td>Su saldo total con el interes del 2% es: </td> 
-               <td class="esp"></td>
-               <td><input type="text" name="sueldoI" id="cantidadI" 
-                readonly="readonly" class="input_text"></td>
-            </tr>
-
-
-            <tr>
-                <td></td>
-                <td class="esp"></td>
-                <td> <input type="button" name="borrar" 
-                value="Borrar Datos" onclick="borrarn()"> </td>
-            </tr>
-
-        </table>
-
-    </form>
+        </form>
 
     </div>
 
-    <div class="forms2">
+
+
+    <div class="forms2" id="form2">
         <!-- Un vendedor recibe un sueldo base más un 10% extra por comisión
     de sus ventas, el vendedor desea saber cuanto dinero obtendrá por
     concepto de comisiones por las tres ventas que realiza en el mes
     y el total que recibirá en el mes tomando en cuenta su sueldo base
     y comisiones -->
-    <form action="" name="formulario2" method="post">
+        <form action="" name="formulario2" method="post">
 
-        <label for="">Ingresos Total, Sueldo + Comisiones</label>
-        <br>
-        <br>
-        <table class="form2">
+            <label for="">Ingresos Total, Sueldo + Comisiones</label>
+            <br>
+            <br>
+            <table class="form2">
 
-            <tr>
-                
-                <td>Introduzca su sueldo base: </td>
-                
-                <td><input type="text" name="sueldo" 
-                    onkeypress="validarn(event)"></td>
+                <tr>
+                    
+                    <td>Introduzca su sueldo base: </td>
+                    
+                    <td><input type="text" name="sueldo" 
+                        onkeypress="validarn(event)"></td>
 
-            </tr>
+                </tr>
 
-            <tr>
-                
-                <td>Introduzca el monto de la venta 1 : </td>
-                
-                <td><input type="text" name="venta1" 
-                    onkeypress="validarn(event)"></td>
+                <tr>
+                    
+                    <td>Introduzca el monto de la venta 1 : </td>
+                    
+                    <td><input type="text" name="venta1" 
+                        onkeypress="validarn(event)"></td>
 
-            </tr>
+                </tr>
 
-            <tr>
-                
-                <td>Introduzca el monto de la venta 2 : </td>
-                
-                <td><input type="text" name="venta2" 
-                    onkeypress="validarn(event)"></td>
+                <tr>
+                    
+                    <td>Introduzca el monto de la venta 2 : </td>
+                    
+                    <td><input type="text" name="venta2" 
+                        onkeypress="validarn(event)"></td>
 
-            </tr>
+                </tr>
 
-            <tr>
-                
-                <td>Introduzca el monto de la venta 3 : </td>
-                
-                <td><input type="text" name="venta3" 
-                    onkeypress="validarn(event)"></td>
+                <tr>
+                    
+                    <td>Introduzca el monto de la venta 3 : </td>
+                    
+                    <td><input type="text" name="venta3" 
+                        onkeypress="validarn(event)"></td>
 
-            </tr>
+                </tr>
 
-            <tr>
+                <tr>
 
-                <td></td>
-                <td><input type="button" value="Calcular Ingresos" 
-                onclick="ventan()"></td>
+                    <td></td>
+                    <td><input type="button" value="Calcular Ingresos" 
+                    onclick="ventan()"></td>
 
-            </tr>
+                </tr>
 
-            <tr>
+                <tr>
 
-                <td>El ingreso por comisiones es: </td> 
-                
-                <td><input type="text" name="comisionI" id="cantidadI" 
-                 readonly="readonly" class="input_text"></td>
+                    <td>El ingreso por comisiones es: </td> 
+                    
+                    <td><input type="text" name="comisionI" 
+                    readonly="readonly" class="input_text"></td>
 
-            </tr>
+                </tr>
 
-            <tr>
+                <tr>
 
-                <td>El ingreso mensual es de: </td> 
-                
-                <td><input type="text" name="ingresoI" id="cantidadI" 
-                 readonly="readonly" class="input_text"></td>
+                    <td>El ingreso mensual es de: </td> 
+                    
+                    <td><input type="text" name="ingresoI" 
+                    readonly="readonly" class="input_text"></td>
 
-            </tr>
+                </tr>
 
-            
+                <tr>
+
+                    <td></td>
+                    
+                    <td> <input type="button" name="borrar" 
+                    value="Borrar Datos" onclick="borrar2n()"> </td>
+
+                </tr>
  
- 
-             <tr>
+            </table>
 
-                 <td></td>
-                
-                 <td> <input type="button" name="borrar" 
-                 value="Borrar Datos" onclick="borrar2n()"> </td>
+        </form>
 
-             </tr>
- 
-
-        </table>
-    </form>
     </div>
     
 
 
-    <script src="JS/validacion.js"></script>
+    <div class="forms3" id="form3">
+        <!-- Una tienda ofrece un descuento del 15% sobre el total de la
+        compra y un cliente desea saber cuanto deberá pagar 
+        finalmente por su compra -->
+
+        <form action="" method="post" name="formulario3">
+
+            <label for="">Descuento en Tienda de 15%</label>
+            <br>
+            <br>
+            <table class="form3">
+                
+                <tr>
+                    <td>Introduce el monto total de tu compra: </td>
+                    <td class="esp"></td>
+                    <td><input type="text" name="montof" 
+                    onkeypress="validarn(event)"></td>
+                </tr>
+    
+    
+                <tr>
+                    <td></td>
+                    <td class="esp"></td>
+                    <td><input type="button" value="Calcular Precio con Descuento" 
+                    onclick="descuenton()"></td>
+                </tr>
+    
+    
+                <tr>
+                   <td>El monto a pagar es de: </td> 
+                   <td class="esp"></td>
+                   <td><input type="text" name="descuentoI" 
+                    readonly="readonly" class="input_text"></td>
+                </tr>
+    
+    
+                <tr>
+                    <td></td>
+                    <td class="esp"></td>
+                    <td> <input type="button" name="borrar" 
+                    value="Borrar Datos" onclick="borrar3n()"> </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
 
 
+
+    <div class="forms4" id="form4">
+        <!-- Un vendedor recibe un sueldo base más un 10% extra por comisión
+    de sus ventas, el vendedor desea saber cuanto dinero obtendrá por
+    concepto de comisiones por las tres ventas que realiza en el mes
+    y el total que recibirá en el mes tomando en cuenta su sueldo base
+    y comisiones -->
+        <form action="" name="formulario4" method="post">
+
+            <label for="">Calificación Final "Algoritmos"</label>
+            <br>
+            <br>
+            <table class="form4">
+
+                <tr>
+                    
+                    <td>Introduzca la calificación del 1° Parcial: </td>
+                    
+                    <td><input type="text" name="parc1" 
+                        onkeypress="validarn(event)"></td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>Introduzca la calificación del 2° Parcial: </td>
+                    
+                    <td><input type="text" name="parc2" 
+                        onkeypress="validarn(event)"></td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>Introduzca la calificación del 3° Parcial: </td>
+                    
+                    <td><input type="text" name="parc3" 
+                        onkeypress="validarn(event)"></td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>Introduzca la calificación del Examen Final: </td>
+                    
+                    <td><input type="text" name="examf" 
+                        onkeypress="validarn(event)"></td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>Introduzca la calificación del Trabajo Final: </td>
+                    
+                    <td><input type="text" name="trabf" 
+                        onkeypress="validarn(event)"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td></td>
+                    <td><input type="button" value="Calcular Calificación" 
+                    onclick="califn()"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>La calificación final es: </td> 
+                    
+                    <td><input type="text" name="califI" 
+                    readonly="readonly" class="input_text"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td></td>
+                    
+                    <td> <input type="button" name="borrar" 
+                    value="Borrar Datos" onclick="borrar4n()"> </td>
+
+                </tr>
+ 
+            </table>
+
+        </form>
+
+    </div>
+
+
+
+    <div class="forms5" id="form5">
+        <!-- Un maestro desea saber que porcentaje de hombres y mujeres
+        hay en un grupo de estudiantes -->
+        <form action="" name="formulario5" method="post">
+
+            <label for="">Porcentaje Hombres y Mujeres</label>
+            <br>
+            <br>
+            <table class="form5">
+
+                <tr>
+                    
+                    <td>Introduzca la cantidad total de alumnos: </td>
+                    
+                    <td><input type="text" name="totalal" 
+                        onkeypress="validarn(event)"></td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>Introduzca la cantidad de estudiantes femeninas: </td>
+                    
+                    <td><input type="text" name="estfem" 
+                        onkeypress="validarn(event)"></td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>Introduzca la cantidad de estudiantes masculinos: </td>
+                    
+                    <td><input type="text" name="estmas" 
+                        onkeypress="validarn(event)"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td></td>
+                    <td><input type="button" value="Calcular Pocentaje de Estudiantes" 
+                    onclick="porcen()"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>El porcentaje de estudiantes femeninos es de: </td> 
+                    
+                    <td><input type="text" name="porcfemI" id="cantidadI" 
+                    readonly="readonly" class="input_text"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>El porcentaje de estudiantes masculinos es de: </td> 
+                    
+                    <td><input type="text" name="porcmasI" id="cantidadI" 
+                    readonly="readonly" class="input_text"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td></td>
+                    
+                    <td> <input type="button" name="borrar" 
+                    value="Borrar Datos" onclick="borrar5n()"> </td>
+
+                </tr>
+ 
+            </table>
+
+        </form>
+
+    </div>
 
     
+    <script src="JS/validacion.js"></script>
 
 
 </body>
