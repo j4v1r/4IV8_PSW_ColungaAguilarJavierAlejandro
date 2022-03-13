@@ -29,7 +29,7 @@ hr{
     padding: 0.5rem;
 }
 
-.forms, .forms2, .forms3, .forms4, .forms5{
+.forms, .forms2, .forms3, .forms4, .forms5, .forms6{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2rem;
@@ -41,7 +41,7 @@ hr{
     text-align: left;
 }
 
-.form1, .form2, .form3, .form4, .form5{
+.form1, .form2, .form3, .form4, .form5, .form6{
     margin-left: 1rem;
 }
 
@@ -50,5 +50,5 @@ hr{
 }
 
 .esp2{
-    width: 0.1rem;
+    width: 5px;
 }

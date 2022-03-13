@@ -160,3 +160,62 @@ function borrar4n(){
     document.formulario4.trabf.value = " ";
     document.formulario4.califI.value = " ";
 }
+
+
+//Formulario 5
+
+
+function porcen(){
+
+    var alumn = document.formulario5.totalal.value;
+    var alumtot = parseFloat(alumn);
+
+    var alumf = document.formulario5.estfem.value;
+    var alumnf = parseFloat(alumf);
+
+    var alumm = document.formulario5.estmas.value;
+    var alumnm = parseFloat(alumm);
+
+    var alumfem = (alumnf*100)/alumtot;
+
+    var alummas = (alumnm*100)/alumtot;
+
+    document.formulario5.porcfemI.value = alumfem + "%";
+    document.formulario5.porcmasI.value = alummas + "%";
+
+}
+
+function borrar5n(){
+
+    document.formulario5.totalal.value = " ";
+    document.formulario5.estfem.value = " ";
+    document.formulario5.estmas.value = " ";
+    document.formulario5.porcfemI.value = " ";
+    document.formulario5.porcmasI.value = " ";
+
+}
+
+
+//Formulario 6
+
+function edadn(){
+
+    var nacimi = document.formulario6.nacim.value;
+    var naci = parseFloat(nacimi);
+
+    var actua = document.formulario6.actu.value;
+    var act = parseFloat(actua);
+
+    var edad = act-naci;
+
+    document.formulario6.edadI.value = edad;
+
+}
+
+function borrar6n(){
+
+    document.formulario6.nacim.value = " ";
+    document.formulario6.actu.value = " ";
+    document.formulario6.edadI.value = " ";
+
+}
