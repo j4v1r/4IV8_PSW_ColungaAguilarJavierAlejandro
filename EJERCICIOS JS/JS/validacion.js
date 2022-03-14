@@ -7,6 +7,7 @@ function validarn(e){
     de un patrón, este patrón debe ser númerico y solo acepta del 
     0 a 9. Todo lo demás lo deja escapar*/
     if (teclado==8) return true;
+
     var patron= /[0-9\d .]/;
 
     var probar = String.fromCharCode(teclado);
@@ -27,12 +28,23 @@ function interes(){
 
     var resul = parseInt(valor);
 
-    var interes = resul*0.02;
+    if(valor==" "){
 
-    var total = resul+interes;
+        alert("Introduzca una cantidad");
 
-    document.formulario1.sueldoI.value = "$" + total;
-}
+    }else if (resul<0){
+
+        alert("Escriba únicamente valores positivos");
+
+    }else{
+        var interes = resul*0.02;
+
+        var total = resul+interes;
+    
+        document.formulario1.sueldoI.value = "$" + total;
+    }
+
+} 
 
 //borrar() no funciona, sino borrarn(), ¿por que? quien sabe
 function borrarn(){
@@ -73,14 +85,27 @@ function ventan(){
     var comision3 = vent3*0.1;
     var total3 = vent3+comision3;
 
-    //Comisiones
-    var com = total1 + total2 + total3;
 
-    //Ingreso final
-    var full = sueldo + total1 + total2 + total3;
+    if (valors==" " || valor1==" " || valor2==" " || valor3==" "){
 
-    document.formulario2.comisionI.value = "$" + com;
-    document.formulario2.ingresoI.value = "$" + full;
+        alert("Introduzca una cantidad");
+
+    }else if (sueldo<0 || vent1<0 || vent2<0 || vent3<0) {
+
+        alert("Introduzca únicamente valores positivos");
+
+    }else{
+
+        //Comisiones
+        var com = total1 + total2 + total3;
+
+        //Ingreso final
+        var full = sueldo + total1 + total2 + total3;
+
+        document.formulario2.comisionI.value = "$" + com;
+        document.formulario2.ingresoI.value = "$" + full;
+    }
+
 }
 
 function borrar2n(){
@@ -93,6 +118,7 @@ function borrar2n(){
     document.formulario2.ingresoI.value = " ";
 
 }
+
 
 
 //Formulario 3
