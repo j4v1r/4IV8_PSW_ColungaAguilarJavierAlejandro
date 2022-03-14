@@ -2,17 +2,27 @@
 
 function validarn(e){
 
-    var teclado = (document.all)?e.keyCode : e.which;
+    var teclado = (e.which)?e.which : e.keycode;
     /*Vamos a aplicar una prueba lógica a todo el teclado a partir 
     de un patrón, este patrón debe ser númerico y solo acepta del 
     0 a 9. Todo lo demás lo deja escapar*/
-    if (teclado==8) return true;
+    if (teclado !==46 && teclado>31 && (teclado<48 || teclado>57)){
 
-    var patron= /[0-9\d .]/;
+        alert("Introduzca únicamente números");
+        return false;
+    
 
-    var probar = String.fromCharCode(teclado);
+    return true;
 
-    return patron.test(probar);
+    }
+    
+    //return true;
+
+    //var patron = /^[0-9\d .]/;
+
+    //var probar = String.fromCharCode(teclado);
+
+    //return patron.test(probar);
 
 }
 
@@ -28,7 +38,7 @@ function interes(){
 
     var resul = parseInt(valor);
 
-    if(valor==" "){
+    if(valor==" " /*|| !/^[0-9\d]*/){
 
         alert("Introduzca una cantidad");
 
