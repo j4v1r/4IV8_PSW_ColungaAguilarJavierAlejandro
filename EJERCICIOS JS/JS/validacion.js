@@ -275,9 +275,25 @@ function edadn(){
     var actua = document.formulario6.actu.value;
     var act = parseFloat(actua);
 
-    var edad = act-naci;
+    if(nacimi==" " || actua==" "){
 
-    document.formulario6.edadI.value = edad;
+        alert("Introduzca un año");
+
+    }else if(naci<0 || act<0){
+
+        alert("Introduzca únicamente valores positivos")
+
+    }else if(act<naci){
+
+        alert("El año de nacimiento debe ser menor que el actual");
+
+    }else{
+
+        var edad = act-naci;
+
+        document.formulario6.edadI.value = edad;
+
+    }
 
 }
 
