@@ -127,9 +127,22 @@ function descuenton(){
 
     var final = document.formulario3.montof.value;
     var montf = parseFloat(final);
-    var desc = montf*0.85;
 
-    document.formulario3.descuentoI.value = "$" + desc;
+    if(final==" "){
+
+        alert("Introduzca una cantidad");
+
+    }else if (montf<0){
+
+        alert("Escriba únicamente valores positivos");
+
+    }else{
+
+        var desc = montf*0.85;
+
+        document.formulario3.descuentoI.value = "$" + desc;
+
+    }
 
 }
 
