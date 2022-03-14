@@ -166,28 +166,42 @@ function califn(){
     var cali2 = parseFloat(calif2);
     var cali3 = parseFloat(calif3);
 
-    var parcsum = cali1+cali2+cali3;
-
-    var parcs = (parcsum*5.5)/30;
 
     //Examen Final
     var examen = document.formulario4.examf.value;
-
     var exam = parseFloat(examen);
 
-    var califexa = (exam*3)/10;
     
     //Trabajo Final
     var trab = document.formulario4.trabf.value;
-
     var trabf = parseFloat(trab);
 
-    var trabfin = (trabf*1.5)/10;
 
-    //Calificación Final
-    var calif = parcs+califexa+trabfin;
+    if(calif1==" " || calif2==" " || calif3==" " || examen==" " || trab==" "){
 
-    document.formulario4.califI.value = calif;
+        alert("Introduzca una cantidad");
+
+    }else if(cali1<0 || cali1>10 || cali2<0 || cali2>10 || cali3<0 || cali3>10 || exam<0 || exam>10 || trabf<0 || trabf>0){
+        
+        alert("Introduza únicamente valores positivos entre 0 y 10");
+
+    }else{
+
+        var parcsum = cali1+cali2+cali3;
+        var parcs = (parcsum*5.5)/30;
+
+        var califexa = (exam*3)/10;
+
+        //Trababajo final
+        var trabfin = (trabf*1.5)/10;
+
+        //Calificación final
+        var calif = parcs+califexa+trabfin;
+
+        document.formulario4.califI.value = calif;
+    }
+
+
 }
 
 function borrar4n(){
@@ -215,12 +229,28 @@ function porcen(){
     var alumm = document.formulario5.estmas.value;
     var alumnm = parseFloat(alumm);
 
-    var alumfem = (alumnf*100)/alumtot;
+    if(alumn==" " || alumf==" " || alumm==" "){
 
-    var alummas = (alumnm*100)/alumtot;
+        alert("Introduzca una cantidad");
 
-    document.formulario5.porcfemI.value = alumfem + "%";
-    document.formulario5.porcmasI.value = alummas + "%";
+    }else if(alumtot<0 || alumnf<0 || alumnm<0){
+
+        alert("Introduzca únicamente valores positivos");
+
+    }else if(alumnf+alumnm!=alumtot){
+
+        alert("Introduzca la cantidad total de estudiantes masculinos y/o femeninos");
+
+    }else{
+
+        var alumfem = (alumnf*100)/alumtot;
+
+        var alummas = (alumnm*100)/alumtot;
+
+        document.formulario5.porcfemI.value = alumfem + "%";
+        document.formulario5.porcmasI.value = alummas + "%";
+
+    }
 
 }
 
