@@ -38,13 +38,17 @@ function interes(){
 
     var resul = parseInt(valor);
 
-    if(valor==" " /*|| !/^[0-9\d]*/){
+    if(valor==" " || valor==""){
 
         alert("Introduzca una cantidad");
 
     }else if (resul<0){
 
         alert("Escriba únicamente valores positivos");
+
+    }else if(valor==46 && valor<31 && (valor>48 || valor<57)){
+
+        alert("Introduzca únicamente números");
 
     }else{
         var interes = resul*0.02;
@@ -96,7 +100,8 @@ function ventan(){
     var total3 = vent3+comision3;
 
 
-    if (valors==" " || valor1==" " || valor2==" " || valor3==" "){
+    if (valors==" " || valor1==" " || valor2==" " || valor3==" " || 
+    valors=="" || valor1=="" || valor2=="" || valor3==""){
 
         alert("Introduzca una cantidad");
 
@@ -138,7 +143,7 @@ function descuenton(){
     var final = document.formulario3.montof.value;
     var montf = parseFloat(final);
 
-    if(final==" "){
+    if(final==" " || final==""){
 
         alert("Introduzca una cantidad");
 
@@ -187,7 +192,8 @@ function califn(){
     var trabf = parseFloat(trab);
 
 
-    if(calif1==" " || calif2==" " || calif3==" " || examen==" " || trab==" "){
+    if(calif1==" " || calif2==" " || calif3==" " || examen==" " || trab==" "
+    || calif1=="" || calif2=="" || calif3=="" || examen=="" || trab==""){
 
         alert("Introduzca una cantidad");
 
@@ -230,28 +236,23 @@ function borrar4n(){
 
 function porcen(){
 
-    var alumn = document.formulario5.totalal.value;
-    var alumtot = parseFloat(alumn);
-
     var alumf = document.formulario5.estfem.value;
     var alumnf = parseFloat(alumf);
 
     var alumm = document.formulario5.estmas.value;
     var alumnm = parseFloat(alumm);
 
-    if(alumn==" " || alumf==" " || alumm==" "){
+    if(alumf==" " || alumm==" " || alumf=="" || alumm==""){
 
         alert("Introduzca una cantidad");
 
-    }else if(alumtot<0 || alumnf<0 || alumnm<0){
+    }else if(alumnf<0 || alumnm<0){
 
         alert("Introduzca únicamente valores positivos");
 
-    }else if(alumnf+alumnm!=alumtot){
-
-        alert("Introduzca la cantidad total de estudiantes masculinos y/o femeninos");
-
     }else{
+
+        var alumtot=alumnf+alumnm;
 
         var alumfem = (alumnf*100)/alumtot;
 
@@ -266,7 +267,6 @@ function porcen(){
 
 function borrar5n(){
 
-    document.formulario5.totalal.value = " ";
     document.formulario5.estfem.value = " ";
     document.formulario5.estmas.value = " ";
     document.formulario5.porcfemI.value = " ";
