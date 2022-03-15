@@ -89,8 +89,8 @@
                 <tr>
                     <td></td>
                     <td class="esp"></td>
-                    <td> <input type="button" name="borrar" 
-                    value="Borrar Datos" onclick="borrarn()"> </td>
+                    <td> <input type="reset" name="borrar" 
+                    value="Borrar Datos"> </td>
                 </tr>
 
             </table>
@@ -173,8 +173,8 @@
                 <tr>
 
                     <td></td>
-                    <td> <input type="button" name="borrar" 
-                    value="Borrar Datos" onclick="borrar2n()"> </td>
+                    <td> <input type="reset" name="borrar" 
+                    value="Borrar Datos"> </td>
 
                 </tr>
  
@@ -232,8 +232,8 @@
 
                     <td></td>
                     <td class="esp"></td>
-                    <td> <input type="button" name="borrar" 
-                    value="Borrar Datos" onclick="borrar3n()"> </td>
+                    <td> <input type="reset" name="borrar" 
+                    value="Borrar Datos"> </td>
 
                 </tr>
 
@@ -317,7 +317,7 @@
                 <tr>
 
                     <td></td>
-                    <td> <input type="button" name="borrar" 
+                    <td> <input type="reset" name="borrar" 
                     value="Borrar Datos" onclick="borrar4n()"> </td>
 
                 </tr>
@@ -383,8 +383,8 @@
                 <tr>
 
                     <td></td>
-                    <td> <input type="button" name="borrar" 
-                    value="Borrar Datos" onclick="borrar5n()"> </td>
+                    <td> <input type="reset" name="borrar" 
+                    value="Borrar Datos"> </td>
 
                 </tr>
  
@@ -407,16 +407,30 @@
 
                 <tr>
                     
-                    <td>Introduzca su año de nacimiento: </td>
-                    <td><input type="text" name="nacim" 
+                    <td>Introduzca la fecha de nacimiento: </td>
+                    <td><input type="text" name="dianacim" 
+                        placeholder="Día"
+                        onkeypress="return validarn(event)"></td>
+                    <td><input type="text" name="mesnacim" 
+                        placeholder="Mes"
+                        onkeypress="return validarn(event)"></td>
+                    <td><input type="text" name="annacim" 
+                        placeholder="Año"
                         onkeypress="return validarn(event)"></td>
 
                 </tr>
 
                 <tr>
                     
-                    <td>Introduzca el año actual: </td>
-                    <td><input type="text" name="actu" 
+                    <td>Introduzca la fecha actual: </td>
+                    <td><input type="text" name="diactu" 
+                        placeholder="Día"
+                        onkeypress="return validarn(event)"></td>
+                    <td><input type="text" name="mesactu" 
+                        placeholder="Mes"
+                        onkeypress="return validarn(event)"></td>
+                    <td><input type="text" name="anactu"
+                        placeholder="Año"
                         onkeypress="return validarn(event)"></td>
 
                 </tr>
@@ -440,8 +454,8 @@
                 <tr>
 
                     <td></td>
-                    <td> <input type="button" name="borrar" 
-                    value="Borrar Datos" onclick="borrar6n()"> </td>
+                    <td> <input type="reset" name="borrar" 
+                    value="Borrar Datos"> </td>
 
                 </tr>
  

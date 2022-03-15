@@ -1,27 +1,16 @@
-//Función que se encargue de validar por expresión regular
+//Función que se encargue de validar código ascii
 
 function validarn(e){
 
     var teclado = (e.which)?e.which : e.keycode;
-    /*Vamos a aplicar una prueba lógica a todo el teclado a partir 
-    de un patrón, este patrón debe ser númerico y solo acepta del 
-    0 a 9. Todo lo demás lo deja escapar*/
+
     if( teclado !==46 && teclado>31 && (teclado<48 || teclado>57) ){
 
         alert("Introduzca únicamente números");
         return false;
     
-
     return true;
     }
-    
-    //return true;
-
-    //var patron = /^[0-9\d .]/;
-
-    //var probar = String.fromCharCode(teclado);
-
-    //return patron.test(probar);
 
 }
 
@@ -60,12 +49,12 @@ function interes(){
 } 
 
 //borrar() no funciona, sino borrarn(), ¿por que? quien sabe
-function borrarn(){
+/*function borrarn(){
 
     document.formulario1.cantidad.value = " ";
     document.formulario1.sueldoI.value = " ";
     
-}
+}*/
 
 
 
@@ -127,17 +116,6 @@ function ventan(){
 
 }
 
-function borrar2n(){
-
-    document.formulario2.sueldo.value = " ";
-    document.formulario2.venta1.value = " ";
-    document.formulario2.venta2.value = " ";
-    document.formulario2.venta3.value = " ";
-    document.formulario2.comisionI.value = " ";
-    document.formulario2.ingresoI.value = " ";
-
-}
-
 
 
 //Formulario 3
@@ -167,12 +145,6 @@ function descuenton(){
 
     }
 
-}
-
-function borrar3n(){
-
-    document.formulario3.montof.value = " ";
-    document.formulario3.descuentoI.value = " ";
 }
 
 
@@ -236,13 +208,7 @@ function califn(){
 }
 
 function borrar4n(){
-
-    document.formulario4.parc1.value = " ";
-    document.formulario4.parc2.value = " ";
-    document.formulario4.parc3.value = " ";
-    document.formulario4.examf.value = " ";
-    document.formulario4.trabf.value = " ";
-    document.formulario4.califI.value = " ";
+    document.formulario6.parc1.value = " ";
 }
 
 
@@ -284,56 +250,59 @@ function porcen(){
 
 }
 
-function borrar5n(){
-
-    document.formulario5.estfem.value = " ";
-    document.formulario5.estmas.value = " ";
-    document.formulario5.porcfemI.value = " ";
-    document.formulario5.porcmasI.value = " ";
-
-}
 
 
 //Formulario 6
 
 function edadn(){
 
-    var nacimi = document.formulario6.nacim.value;
-    var naci = parseFloat(nacimi);
+    //Nacimiento
+    var dianacimi = document.formulario6.dianacim.value;
+    var dianaci = parseFloat(dianacimi)
 
-    var actua = document.formulario6.actu.value;
-    var act = parseFloat(actua);
+    var mesnacimi = document.formulario6.mesnacim.value;
+    var mesnaci = parseFloat(mesnacimi)
 
-    if(nacimi==" " || actua==" " || nacimi=="" || actua=="8"){
+    var annacimi = document.formulario6.annacim.value;
+    var annaci = parseFloat(annacimi);
 
-        alert("Introduzca un año");
+    
+    //Actual
+    var diaactua = document.formulario6.diactu.value;
+    var diact = parseFloat(diaactua);
 
-    }else if(naci<0 || act<0){
+    var mesactua = document.formulario6.mesactu.value;
+    var mesact = parseFloat(mesactua);
+    
+    var anactua = document.formulario6.anactu.value;
+    var anact = parseFloat(anactua);
+
+    if(dianacimi==" " || dianacimi=="" || diaactua==" " || diaactua=="" ||
+        mesnacimi==" " || mesnacimi=="" || mesactua==" " || mesactua=="" ||
+        annacimi==" " || anactua==" " || annacimi=="" || anactua==""){
+
+        alert("Introduzca un la fecha completa");
+
+    }else if(dianaci<0 || diact<0 || mesnaci<0 || mesact<0 || annaci<0 || anact<0){
 
         alert("Introduzca únicamente valores positivos")
 
-    }else if(act<naci){
+    }else if(anact<annaci){
 
         alert("El año de nacimiento debe ser menor que el actual");
 
-    }else if(!/^[0-9]+$/.test(nacimi) || !/^[0-9]+$/.test(actua)){
+    }else if( !/^[0-9]+$/.test(dianacimi) || !/^[0-9]+$/.test(diaactua)
+    || !/^[0-9]+$/.test(mesnacimi) || !/^[0-9]+$/.test(mesactua) ||
+    !/^[0-9]+$/.test(annacimi) || !/^[0-9]+$/.test(anactua) ){
 
         alert("Introduzca únicamente números");
 
     }else{
 
-        var edad = act-naci;
+        var edad = anact-annaci;
 
         document.formulario6.edadI.value = edad;
 
     }
-
-}
-
-function borrar6n(){
-
-    document.formulario6.nacim.value = " ";
-    document.formulario6.actu.value = " ";
-    document.formulario6.edadI.value = " ";
 
 }
