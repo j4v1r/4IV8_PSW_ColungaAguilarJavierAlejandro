@@ -283,9 +283,17 @@ function edadn(){
 
         alert("Introduzca un la fecha completa");
 
-    }else if(dianaci<0 || diact<0 || mesnaci<0 || mesact<0 || annaci<0 || anact<0){
+    }else if(dianaci<0 || diact<0 || dianaci>31 || diact>31 ){
 
-        alert("Introduzca únicamente valores positivos")
+        alert("Recuerda que los meses tienen hasta 31 días");
+
+    }else if(mesnaci<0 || mesact<0 || mesnaci>12 || mesact>12 ){
+
+        alert("Recuerda que el año tiene solo 12 meses");
+
+    }else if(annaci<0 || anact<0){
+
+        alert("Introduzca un año válido");
 
     }else if(anact<annaci){
 
@@ -297,9 +305,17 @@ function edadn(){
 
         alert("Introduzca únicamente números");
 
-    }else{
+    }else if(anact>=annaci){
 
-        var edad = anact-annaci;
+        if(mesact<mesnaci && diact<dianaci){
+
+            var edad = anact-annaci-1;
+
+        }else{
+
+            var edad = anact-annaci;
+            
+        }
 
         document.formulario6.edadI.value = edad;
 
