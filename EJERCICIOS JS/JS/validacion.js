@@ -307,19 +307,18 @@ function edadn(){
         if(mesact<mesnaci){
 
             var edad = anact-annaci-1;
-            document.formulario6.edadI.value = edad + " año/s";
 
         }else if(mesact=mesnaci && diact<dianaci){
 
             var edad = anact-annaci-1;
-            document.formulario6.edadI.value = edad + " año/s";
             
         }else{
 
             var edad = anact-annaci;
-            document.formulario6.edadI.value = edad + " año/s";
 
         }
+
+        document.formulario6.edadI.value = edad + " año/s";
 
     }else if(anact=annaci){
 
