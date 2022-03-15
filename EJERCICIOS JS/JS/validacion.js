@@ -88,8 +88,7 @@ function ventan(){
     var total3 = vent3+comision3;
 
 
-    if (valors==" " || valor1==" " || valor2==" " || valor3==" " || 
-    valors=="" || valor1=="" || valor2=="" || valor3==""){
+    if (valors=="" || valor1=="" || valor2=="" || valor3==""){
 
         alert("Introduzca una cantidad");
 
@@ -125,7 +124,7 @@ function descuenton(){
     var final = document.formulario3.montof.value;
     var montf = parseFloat(final);
 
-    if(final==" " || final==""){
+    if(final==""){
 
         alert("Introduzca una cantidad");
 
@@ -173,8 +172,7 @@ function califn(){
     var trabf = parseFloat(trab);
 
 
-    if(calif1==" " || calif2==" " || calif3==" " || examen==" " || trab==" "
-    || calif1=="" || calif2=="" || calif3=="" || examen=="" || trab==""){
+    if(calif1=="" || calif2=="" || calif3=="" || examen=="" || trab==""){
 
         alert("Introduzca una cantidad");
 
@@ -223,7 +221,7 @@ function porcen(){
     var alumm = document.formulario5.estmas.value;
     var alumnm = parseFloat(alumm);
 
-    if(alumf==" " || alumm==" " || alumf=="" || alumm==""){
+    if(alumf=="" || alumm==""){
 
         alert("Introduzca una cantidad");
 
@@ -277,9 +275,8 @@ function edadn(){
     var anactua = document.formulario6.anactu.value;
     var anact = parseFloat(anactua);
 
-    if(dianacimi==" " || dianacimi=="" || diaactua==" " || diaactua=="" ||
-        mesnacimi==" " || mesnacimi=="" || mesactua==" " || mesactua=="" ||
-        annacimi==" " || anactua==" " || annacimi=="" || anactua==""){
+    if(dianacimi=="" || diaactua=="" || mesnacimi=="" 
+        || mesactua=="" || annacimi=="" || anactua==""){
 
         alert("Introduzca un la fecha completa");
 
