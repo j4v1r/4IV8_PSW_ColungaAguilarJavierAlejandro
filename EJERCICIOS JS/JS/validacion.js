@@ -312,7 +312,11 @@ function edadn(){
 
             var edad = anact-annaci-1;
             
-        }else{
+        }/*else if(mesact==mesnaci && diact>=dianaci){
+
+            var edad = anact-annaci;
+            
+        }*/else{
 
             var edad = anact-annaci;
 
