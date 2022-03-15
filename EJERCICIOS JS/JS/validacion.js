@@ -26,7 +26,7 @@ function interes(){
 
     var resul = parseInt(valor);
 
-    if(valor==" " || valor==""){
+    if(valor==""){
 
         alert("Introduzca una cantidad");
 
