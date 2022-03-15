@@ -305,20 +305,32 @@ function edadn(){
 
         alert("Introduzca únicamente números");
 
-    }else if(anact>=annaci){
+    }else if(anact>annaci){
 
-        if(mesact<mesnaci && diact<dianaci){
+        if(mesact<mesnaci){
 
             var edad = anact-annaci-1;
+            document.formulario6.edadI.value = edad + " año/s";
 
+        }else if(mesact=mesnaci && diact<dianaci){
+
+            var edad = anact-annaci-1;
+            document.formulario6.edadI.value = edad + " año/s";
+            
         }else{
 
             var edad = anact-annaci;
-            
+            document.formulario6.edadI.value = edad + " año/s";
+
         }
 
-        document.formulario6.edadI.value = edad;
+    }else if(anact=annaci){
 
+        if(mesact>mesnaci && diact<dianaci){
+
+            var edad = mesact-mesnaci-1;
+            document.formulario6.edadI.value = edad + " mes/es"
+        }
     }
 
 }
