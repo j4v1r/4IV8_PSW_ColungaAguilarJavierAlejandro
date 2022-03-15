@@ -6,14 +6,13 @@ function validarn(e){
     /*Vamos a aplicar una prueba lógica a todo el teclado a partir 
     de un patrón, este patrón debe ser númerico y solo acepta del 
     0 a 9. Todo lo demás lo deja escapar*/
-    if (teclado !==46 && teclado>31 && (teclado<48 || teclado>57)){
+    if( teclado !==46 && teclado>31 && (teclado<48 || teclado>57) ){
 
         alert("Introduzca únicamente números");
         return false;
     
 
     return true;
-
     }
     
     //return true;
@@ -46,7 +45,7 @@ function interes(){
 
         alert("Escriba únicamente valores positivos");
 
-    }else if(valor==46 && valor<31 && (valor>48 || valor<57)){
+    }else if(!/^[0-9]+$/.test(valor)){
 
         alert("Introduzca únicamente números");
 
@@ -109,6 +108,11 @@ function ventan(){
 
         alert("Introduzca únicamente valores positivos");
 
+    }else if ( (!/^[0-9]+$/.test(valors)) || (!/^[0-9]+$/.test(valor1))
+    || (!/^[0-9]+$/.test(valor2)) || (!/^[0-9]+$/.test(valor3))){
+
+        alert("Introduzca únicamente números");
+
     }else{
 
         //Comisiones
@@ -151,6 +155,10 @@ function descuenton(){
 
         alert("Escriba únicamente valores positivos");
 
+    }else if(!/^[0-9]+$/.test(final)){
+
+        alert("Introduzca únicamente números");
+
     }else{
 
         var desc = montf*0.85;
@@ -166,6 +174,7 @@ function borrar3n(){
     document.formulario3.montof.value = " ";
     document.formulario3.descuentoI.value = " ";
 }
+
 
 
 //Formulario 4
@@ -197,9 +206,15 @@ function califn(){
 
         alert("Introduzca una cantidad");
 
-    }else if(cali1<0 || cali1>10 || cali2<0 || cali2>10 || cali3<0 || cali3>10 || exam<0 || exam>10 || trabf<0 || trabf>0){
+    }else if(cali1<0 || cali1>10 || cali2<0 || cali2>10 || cali3<0 || cali3>10 || exam<0 || exam>10 || trabf<0 || trabf>10){
         
         alert("Introduza únicamente valores positivos entre 0 y 10");
+
+    }else if(!/^[0-9]+$/.test(calif1) || !/^[0-9]+$/.test(calif2)
+    || !/^[0-9]+$/.test(calif3) || !/^[0-9]+$/.test(examen) ||
+    !/^[0-9]+$/.test(trab)){
+
+        alert("Introduzca únicamente números")
 
     }else{
 
@@ -231,8 +246,8 @@ function borrar4n(){
 }
 
 
-//Formulario 5
 
+//Formulario 5
 
 function porcen(){
 
@@ -249,6 +264,10 @@ function porcen(){
     }else if(alumnf<0 || alumnm<0){
 
         alert("Introduzca únicamente valores positivos");
+
+    }else if(!/^[0-9]+$/.test(alumf) || !/^[0-9]+$/.test(alumm)){
+
+        alert("Introduzca únicamente números");
 
     }else{
 
@@ -285,7 +304,7 @@ function edadn(){
     var actua = document.formulario6.actu.value;
     var act = parseFloat(actua);
 
-    if(nacimi==" " || actua==" "){
+    if(nacimi==" " || actua==" " || nacimi=="" || actua=="8"){
 
         alert("Introduzca un año");
 
@@ -296,6 +315,10 @@ function edadn(){
     }else if(act<naci){
 
         alert("El año de nacimiento debe ser menor que el actual");
+
+    }else if(!/^[0-9]+$/.test(nacimi) || !/^[0-9]+$/.test(actua)){
+
+        alert("Introduzca únicamente números");
 
     }else{
 
