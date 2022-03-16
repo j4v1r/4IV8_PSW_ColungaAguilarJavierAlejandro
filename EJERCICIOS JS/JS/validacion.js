@@ -308,15 +308,11 @@ function edadn(){
 
             var edad = anact-annaci-1;
 
-        }else if(mesact=mesnaci && diact<dianaci){
+        }else if(mesact==mesnaci && diact<dianaci){
 
             var edad = anact-annaci-1;
             
-        }/*else if(mesact==mesnaci && diact>=dianaci){
-
-            var edad = anact-annaci;
-            
-        }*/else{
+        }else{
 
             var edad = anact-annaci;
 
@@ -324,12 +320,27 @@ function edadn(){
 
         document.formulario6.edadI.value = edad + " año/s";
 
-    }else if(anact=annaci){
+    }else if(anact==annaci){
 
         if(mesact>mesnaci && diact<dianaci){
 
             var edad = mesact-mesnaci-1;
             document.formulario6.edadI.value = edad + " mes/es"
+
+        }else if(mesact>mesnaci && diact>=dianaci){
+
+            var edad = mesact-mesnaci;
+            document.formulario6.edadI.value = edad + " mes/es"
+
+        }else if(mesact==mesnaci && diact<dianaci){
+
+            alert("Escriba las fechas en el orden correcto");
+            
+        }else{
+
+            var edad = diact - dianaci;
+            document.formulario6.edadI.value = edad + " día/s"
+
         }
     }
 
