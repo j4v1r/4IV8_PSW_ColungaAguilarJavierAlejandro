@@ -1,3 +1,28 @@
+//Problema 1
+
+function problema1n(){
+
+    var p1_input = document.querySelector('#p1-input').value;
+
+    if(!/^[a-zA-Z,\s, ñ, Ñ]*$/g.test(p1_input)){
+
+        alert("Introduzca únicamente letras y palabras sin acento");
+
+    }else{
+        
+        var p1_palabras = p1_input.split(' ');
+
+        document.querySelector('#p1-output').textContent = p1_palabras.reverse();
+
+    }
+}
+
+
+//Problema 2
+
+function problema2n(){
+
+}
 
 
 //Problema 3
@@ -12,7 +37,13 @@ function problema3n(){
     //Vamos a obtener la entrada de los datos
     var p3_input = document.querySelector('#p3-input').value;
 
-    var p3_palabras = p3_input.split(',');
+    if(!/^[a-zA-Z,\s, ñ, Ñ]*$/g.test(p3_input)){
+
+        alert("Introduzca únicamente letras y palabras sin acento");
+
+    }else{
+
+        var p3_palabras = p3_input.split(',');
 
     //Tengo que eliminar los espacios
     p3_palabras = p3_palabras.map(function (palabra){
@@ -61,8 +92,7 @@ function problema3n(){
     });
 
     document.querySelector('#p3-output').textContent = p3_res;
+
+    } 
     
-
-     
-
 }
