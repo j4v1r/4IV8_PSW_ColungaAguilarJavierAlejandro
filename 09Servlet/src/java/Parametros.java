@@ -32,9 +32,23 @@ public class Parametros extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             String nombre = "";
+            String correo = "";
+            int telefono = 0;
+            
+            //IP
+            int puerto;
+            String nombremaquina, ip, ip2, host;
             
             //Vamos a obtener el parámetro
             nombre = request.getParameter("nombre");
+            telefono = Integer.parseInt(request.getParameter("telefono"));
+            correo = request.getParameter("correo");
+            
+            ip = request.getLocalAddr();
+            nombremaquina = request.getLocalName();
+            puerto = request.getLocalPort();
+            ip2 = request.getRemoteAddr();
+            host = request.getRemoteHost();
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -42,8 +56,24 @@ public class Parametros extends HttpServlet {
             out.println("<title>Servlet Parametros</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Hola mundo, tu nombre es: " + nombre + "</h1>"
-            +"<a href='index.html'>Regresar a principal</a>");
+            out.println("<h1>Hola mundo, tu nombre es: " 
+                    + nombre + "</h1>"
+                            +"<br>"
+                            +"<h1>Tu telefono es: " + telefono + "</h1>"
+                            +"<br>"
+                            +"<h1>Tu correo es: " + correo + "</h1>"     
+                            +"<br>"
+                            +"<h1>Tu IP local es: " + ip + "</h1>"
+                            +"<br>"
+                            +"<h1>Tu IP Remota es: " + ip2 + "</h1>"
+                            +"<br>"
+                            +"<h1>Host Remoto: " + host + "</h1>"
+                            +"<br>"  
+                            +"<h1>Nombre Local Maquina " + nombremaquina + "</h1>"
+                            +"<br>"
+                            +"<h1>Puerto: " + puerto + "</h1>"
+                            +"<br>"     
+                            +"<a href='index.html'>Regresar a principal</a>");
             out.println("</body>");
             out.println("</html>");
         }
