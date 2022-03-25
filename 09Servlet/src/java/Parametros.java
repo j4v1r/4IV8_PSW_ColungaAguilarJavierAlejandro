@@ -73,6 +73,7 @@ public class Parametros extends HttpServlet {
                             +"<br>"
                             +"<h1>Puerto: " + puerto + "</h1>"
                             +"<br>"     
+                            +"<br>"
                             +"<a href='index.html'>Regresar a principal</a>");
             out.println("</body>");
             out.println("</html>");
