@@ -11,10 +11,81 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        
         <div class="container">
             <h1>Consulta de Alumnos de la Batiz</h1>
             <br>
             <a href="ConsultarAlumnos">Consultar Lista</a>
         </div>
+        
+        <div class="registro">
+            <form  name="formulario" method="post" action="RegistrarAlumnos">
+                
+                <br>
+                <label>Nombre</label>
+                <br>
+                <input type="text" name="nombre" id="nombre">
+                <br>
+                <label>Apellido Paterno</label>
+                <br>
+                <input type="text" name="appat" id="appat">
+                <br>
+                <label>Apellido Materno</label>
+                <br>
+                <input type="text" name="apmat" id="apmat">
+                <br>
+                <label>Boleta</label>
+                <br>
+                <input type="text" name="boleta" id="boleta">
+                <br>
+                <label>Telefono</label>
+                <br>
+                <input type="text" name="telefono" id="telefono">
+                <br>
+                <input type="submit" value="Registrar Nuevo Alumno">
+                <br>
+                <input type="reset" value="Borrar Datos">
+            </form>
+        </div>
+        
+        <div class="eliminar">
+            <form method="get" action="EliminarAlumno" name="elimina">
+                <br>
+                <label>Ingrese la boleta para eliminar un alumno</label>
+                <br>
+                <input type="text" name="boletaelimina" >
+                <br>
+                <input type="submit" value="Dar de baja">
+            </form>
+        </div>
+        
+        <div class="actualizar">
+            <form method="post" action="ActualizarAlumno" name="actualiza">
+                <br>
+                <br>
+                Elige el dato a modificar:
+                <select name="dato" id="dato">
+                <option value="1">Nombre</option>
+                <option value="2">Apellido Paterno</option>
+                <option value="3">Apellido Materno</option>
+                <option value="4">Boleta</option>
+                <option value="5">Telefono</option>
+                </select>
+                <br>
+                <br>
+                <label>Ingrese el nuevo dato del alumno</label>
+                <br>
+                <input type="text" name="nombre" id="nombre" >
+                <br>
+                <label>Ingrese la boleta del alumno</label>
+                <br>
+                <input type="text" name="boleta" id="boleta" >
+                <br>
+                <input type="submit" value="Actualizar Información">
+            </form>
+        </div>
+        
+
+        
     </body>
 </html>

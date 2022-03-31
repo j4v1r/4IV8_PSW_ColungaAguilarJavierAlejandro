@@ -4,9 +4,33 @@
         <servlet-name>ConsultarAlumnos</servlet-name>
         <servlet-class>ConsultarAlumnos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistrarAlumnos</servlet-name>
+        <servlet-class>RegistrarAlumnos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EliminarAlumno</servlet-name>
+        <servlet-class>EliminarAlumno</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ActualizarAlumno</servlet-name>
+        <servlet-class>ActualizarAlumno</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConsultarAlumnos</servlet-name>
         <url-pattern>/ConsultarAlumnos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistrarAlumnos</servlet-name>
+        <url-pattern>/RegistrarAlumnos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarAlumno</servlet-name>
+        <url-pattern>/EliminarAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActualizarAlumno</servlet-name>
+        <url-pattern>/ActualizarAlumno</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
