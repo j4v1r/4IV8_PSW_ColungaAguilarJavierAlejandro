@@ -102,6 +102,7 @@ public class RegistrarAlumnos extends HttpServlet {
             out.println("<head>");
             out.println("<title>Registro de Alumnos</title>");            
             out.println("</head>");
+            out.println("<link rel=\"stylesheet\" href=\"CSS/style.css\">");
             out.println("<body>");
             try{
                 //Obtener los parametros para poder insertarlos en la BD
@@ -138,6 +139,8 @@ public class RegistrarAlumnos extends HttpServlet {
             }
             
             out.println("<a href='ConsultarAlumnos' >Consultar Alumnos</a>");
+            out.println("<br>");
+            out.println("<a href='index.html' >Inicio</a>");
             out.println("</body>");
             out.println("</html>");
         }   

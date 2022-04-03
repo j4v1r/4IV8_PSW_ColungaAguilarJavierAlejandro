@@ -9,7 +9,10 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="validacion.js"></script>
     <body>
         
         <div class="container">
@@ -19,50 +22,47 @@ and open the template in the editor.
         </div>
         
         <div class="registro">
-            <form  name="formulario" method="post" action="RegistrarAlumnos">
-                
-                <br>
+            <form  name="formulario" method="post" action="RegistrarAlumnos"  >
                 <label>Nombre</label>
                 <br>
-                <input type="text" name="nombre" id="nombre">
+                <input type="text" name="nombre" id="nombre" required="true" >
                 <br>
                 <label>Apellido Paterno</label>
                 <br>
-                <input type="text" name="appat" id="appat">
+                <input type="text" name="appat" id="appat" required="true" >
                 <br>
                 <label>Apellido Materno</label>
                 <br>
-                <input type="text" name="apmat" id="apmat">
+                <input type="text" name="apmat" id="apmat" required="true" >
                 <br>
                 <label>Boleta</label>
                 <br>
-                <input type="text" name="boleta" id="boleta">
+                <input type="text" name="boleta" id="boleta" required="true" >
                 <br>
                 <label>Telefono</label>
                 <br>
-                <input type="text" name="telefono" id="telefono">
+                <input type="text" name="telefono" id="telefono" required="true" >
                 <br>
-                <input type="submit" value="Registrar Nuevo Alumno">
+                <input type="button" value="Registrar Nuevo Alumno" onclick="registrar()" >
                 <br>
                 <input type="reset" value="Borrar Datos">
+                <br>
             </form>
         </div>
         
         <div class="eliminar">
             <form method="get" action="EliminarAlumno" name="elimina">
-                <br>
                 <label>Ingrese la boleta para eliminar un alumno</label>
                 <br>
-                <input type="text" name="boletaelimina" >
+                <input type="text" name="boletaelimina" id="boletaelimina">
                 <br>
-                <input type="submit" value="Dar de baja">
+                <input type="button" value="Dar de baja" onclick="eliminar()">
+                <br>
             </form>
         </div>
         
         <div class="actualizar">
             <form method="post" action="ActualizarAlumno" name="actualiza">
-                <br>
-                <br>
                 Elige el dato a modificar:
                 <select name="dato" id="dato">
                 <option value="1">Nombre</option>
@@ -75,17 +75,18 @@ and open the template in the editor.
                 <br>
                 <label>Ingrese el nuevo dato del alumno</label>
                 <br>
-                <input type="text" name="nombre" id="nombre" >
+                <input required type="text" name="nombr" id="nombr" >
                 <br>
                 <label>Ingrese la boleta del alumno</label>
                 <br>
-                <input type="text" name="boleta" id="boleta" >
+                <input type="text" name="boletaact" id="boletaact" >
                 <br>
-                <input type="submit" value="Actualizar Información">
+                <input type="button" value="Actualizar Información" onclick="actualizar()">
+                <br>
             </form>
+            
         </div>
         
-
         
-    </body>
+        </body>
 </html>

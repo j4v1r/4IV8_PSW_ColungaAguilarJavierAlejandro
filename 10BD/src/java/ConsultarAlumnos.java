@@ -96,10 +96,11 @@ public class ConsultarAlumnos extends HttpServlet {
             out.println("<head>");
             out.println("<title>Tabla de Alumnos de Batiz</title>");            
             out.println("</head>");
+            out.println("<link rel=\"stylesheet\" href=\"CSS/style.css\">");
             out.println("<body>");
             out.println("<h1>Lista de Alumnos de Batiz</h1>"
                         +"<br>"
-                        +"<table border='2'>"
+                        +"<table align=center border='2'>"
                             +"<tr>"
                                 +"<th>Boleta</th>"
                                 +"<th>Nombre del Alumno</th>"
@@ -144,6 +145,8 @@ public class ConsultarAlumnos extends HttpServlet {
             
             
             out.println("</table>");
+            out.println("<br>");
+            out.println("<a href='index.html' >Inicio</a>");
             out.println("</body>");
             out.println("</html>");
         }

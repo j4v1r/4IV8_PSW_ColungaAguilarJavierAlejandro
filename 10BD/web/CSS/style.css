@@ -1,0 +1,20 @@
+html{
+    background-color: #AACCDD;
+    text-align: center;
+}
+
+.registro, .eliminar, .actualizar{
+
+    background-color: #71C9CE;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    margin-top: 2rem;
+    width: 50%;
+    font-size: large;
+    border-radius: 25px;
+    padding: 1rem;
+    
+
+}
+

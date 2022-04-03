@@ -103,39 +103,57 @@ public class ActualizarAlumno extends HttpServlet {
             out.println("<head>");
             out.println("<title>Actualización de Alumnos</title>");            
             out.println("</head>");
+            out.println("<link rel=\"stylesheet\" href=\"CSS/style.css\">");
             out.println("<body>");
             try{
                 String nom;
                 
                 int opcion = Integer.parseInt(request.getParameter("dato"));
-                int boleta = Integer.parseInt(request.getParameter("boleta"));
+                int boleta = Integer.parseInt(request.getParameter("boletaact"));
                 
-                nom = request.getParameter("nombre"); 
+                nom = request.getParameter("nombr"); 
                 
                 
-                if(opcion==1){
-                    String q = "update alumnosbatiz set nombre='"+nom+"'where boleta="+boleta;
-                    set.executeUpdate(q);
-                }else if(opcion==2){
-                    String q = "update alumnosbatiz set appat='"+nom+"'where boleta="+boleta;
-                    set.executeUpdate(q);
-                }else if(opcion==3){
-                    String q = "update alumnosbatiz set apmat='"+nom+"'where boleta="+boleta;
-                    set.executeUpdate(q);
-                }else if (opcion==4){
-                    String q = "update alumnosbatiz set boleta='"+nom+"'where boleta="+boleta;
-                    set.executeUpdate(q);
-                }else if(opcion==5){
-                    String q = "update alumnosbatiz set telefono='"+nom+"'where boleta="+boleta;
-                    set.executeUpdate(q);
-                }else{
-                    out.println("<h1>Error no se pudo editar</h1>");
+                switch (opcion) {
+                    case 1:
+                        {
+                            String q = "update alumnosbatiz set nombre='"+nom+"'where boleta="+boleta;
+                            set.executeUpdate(q);
+                            break;
+                        }
+                    case 2:
+                        {
+                            String q = "update alumnosbatiz set appat='"+nom+"'where boleta="+boleta;
+                            set.executeUpdate(q);
+                            break;
+                        }
+                    case 3:
+                        {
+                            String q = "update alumnosbatiz set apmat='"+nom+"'where boleta="+boleta;
+                            set.executeUpdate(q);
+                            break;
+                        }
+                    case 4:
+                        {
+                            String q = "update alumnosbatiz set boleta='"+nom+"'where boleta="+boleta;
+                            set.executeUpdate(q);
+                            break;
+                        }
+                    case 5:
+                        {
+                            String q = "update alumnosbatiz set telefono='"+nom+"'where boleta="+boleta;
+                            set.executeUpdate(q);
+                            break;
+                        }
+                    default:
+                        out.println("<h1>Error no se pudo editar</h1>");
+                        break;
                 }
                 
 
-                String q = "update alumnosbatiz set nombre='"+nom+"'where boleta="+boleta;
+                //String q = "update alumnosbatiz set nombre='"+nom+"'where boleta="+boleta;
+                //set.executeUpdate(q);
                 
-                set.executeUpdate(q);
                 out.println("<h1>Alumno Actualizado</h1>");
                 System.out.println("Dato actualizado");
                 
@@ -147,11 +165,12 @@ public class ActualizarAlumno extends HttpServlet {
                 out.println("<h1>Error no se pudo editar</h1>");
                 
             }
+            
             //out.println("<h1>Servlet ActualizarAlumno at " + request.getContextPath() + "</h1>");
             out.println("<a href='ConsultarAlumnos' >Consultar Alumnos</a>");
             out.println("<br>");
             out.println("<br>");
-            out.println("<a href='index.html' >Volver a Actualizar</a>");
+            out.println("<a href='index.html' >Inicio</a>");
             out.println("</body>");
             out.println("</html>");
         }
