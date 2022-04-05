@@ -9,7 +9,10 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -121,13 +124,36 @@ public class RegistrarAlumnos extends HttpServlet {
                 System.out.println(tel);
                 System.out.println(boleta);
                 
+                String q = "select * from alumnosbatiz where boleta="+boleta;
                 
+                rs = set.executeQuery(q);
+                System.out.println(rs);
+                
+                if( !rs.next() ){
+                    
+                    String a = "insert into alumnosbatiz values("+boleta+",'"+nom+"','"+appat+"','"+apmat+"','"+tel+"')";
+                    //Se debe ejecutar la sentencia
+                
+                    set.executeUpdate(a);
+                    out.println("<h1>Alumno Registrado con Exito</h1>");
+                    System.out.println("Dato registrado");
+                    
+                }else{
+                    
+                    //q = "delete from alumnosbatiz where boleta="+boleta;
+                    //set.executeUpdate(q);
+                    out.println("<h1>Este alumno ya existe, por favor revisa tus datos</h1>");
+                    System.out.println("Dato no registrado");
+                }
+                
+                
+                /*
                 String q = "insert into alumnosbatiz values("+boleta+",'"+nom+"','"+appat+"','"+apmat+"','"+tel+"')";
                 //Se debe ejecutar la sentencia
                 
                 set.executeUpdate(q);
                 out.println("<h1>Alumno Registrado con Exito</h1>");
-                System.out.println("Dato registrado");
+                System.out.println("Dato registrado");*/
                 
                 
             }catch(Exception e){
@@ -156,6 +182,8 @@ public class RegistrarAlumnos extends HttpServlet {
         return "Short description";
     }// </editor-fold>
     
+    
+           
     
     public void destroy(){
         try{

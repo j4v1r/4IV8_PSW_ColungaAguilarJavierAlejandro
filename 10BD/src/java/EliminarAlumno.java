@@ -93,11 +93,33 @@ public class EliminarAlumno extends HttpServlet {
                 //delete from alumnobatiz where boleta=?
                 int boleta = Integer.parseInt(request.getParameter("boletaelimina"));
                 
+                String q = "select * from alumnosbatiz where boleta="+boleta;
+                
+                rs = set.executeQuery(q);
+                System.out.println(rs);
+                
+                if( rs.next() ){
+                    
+                    String a;
+                    a = "delete from alumnosbatiz where boleta ="+boleta;
+                    set.executeUpdate(a);
+                    out.println("<h1>Alumno Eliminado</h1>");
+                    System.out.println("Dato eliminado");
+                    
+                }else{
+                    
+                    //q = "delete from alumnosbatiz where boleta="+boleta;
+                    //set.executeUpdate(q);
+                    out.println("<h1>Boleta inexistente, por favor revisa si estás registrado y/o la boleta es correcta</h1>");
+                    System.out.println("Dato no eliminado");
+                }
+                
+                /*
                 String q = "delete from alumnosbatiz where boleta ="+boleta;
                 
                 set.executeUpdate(q);
                 out.println("<h1>Alumno Dado de Baja</h1>");
-                System.out.println("Dato eliminado");
+                System.out.println("Dato eliminado");**/
             
             }catch(Exception e){
                 System.out.println("Error no se puede eliminar, verificar el dato de busqueda");
