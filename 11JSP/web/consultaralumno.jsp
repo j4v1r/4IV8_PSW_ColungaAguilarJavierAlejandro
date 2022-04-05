@@ -31,7 +31,7 @@
                 
             
         <%
-            //aqui ya puedo incorporar java
+            //Aquí ya puedo incorporar java
             Connection con = null;
             Statement set = null;
             ResultSet rs = null;
@@ -39,15 +39,15 @@
             String username, url, password, driver;
             
             url = "jdbc:mysql://localhost/alumnos";
-            username="Alejandro";
-            password="glorfInd3#";
+            username = "Alejandro";
+            password = "gl0rfInd3#";
             //username= "root";
             //password = "n0m3l0";
             
             driver = "com.mysql.jdbc.Driver";
             
             try{
-                //conectarnos
+                //Conectarnos
                 Class.forName(driver);
                 con = DriverManager.getConnection(url, username, password);
                 
@@ -68,7 +68,7 @@
                         <td><%=rs.getString("nombre")%></td>
                         <td><%=rs.getString("appat")%></td>
                         <td><%=rs.getString("apmat")%></td>
-                        <td><%=rs.getString("tel")%></td>
+                        <td><%=rs.getString("telefono")%></td>
                         <td><a href="editaralumno.jsp?id=<%=rs.getInt("boleta")%>" >Editar</a></td>
                         <td><a href="borraralumno.jsp?id=<%=rs.getInt("boleta")%>" >Borrar</a></td>
                     </tr>

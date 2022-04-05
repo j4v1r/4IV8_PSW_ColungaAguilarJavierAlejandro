@@ -23,8 +23,8 @@
             String username, url, password, driver;
             
             url = "jdbc:mysql://localhost/alumnos";
-            username= "Alejandro";
-            password = "glorfInd3#";
+            username = "Alejandro";
+            password = "gl0rfInd3#";
             
             driver = "com.mysql.jdbc.Driver";
             
@@ -45,8 +45,7 @@
                     
                     set = con.createStatement();
                     
-                    String q = "insert into alumnobatiz "
-                            + "values ("+bol+", '"+nom+"', '"+appat+"', '"+apmat+"', '"+tel+"')";
+                    String q = "insert into alumnosbatiz values("+bol+", '"+nom+"', '"+appat+"', '"+apmat+"', '"+tel+"')";
                     
                     int registro = set.executeUpdate(q);
                     
