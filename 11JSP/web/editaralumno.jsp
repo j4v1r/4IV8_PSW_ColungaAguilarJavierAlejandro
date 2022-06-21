@@ -1,7 +1,7 @@
 <%-- 
-    Document   : consultaralumno
-    Created on : 4/04/2022, 08:11:07 PM
-    Author     : Alumno
+    Document   : editaralumno
+    Created on : 5/04/2022, 04:34:31 PM
+    Author     : Rogelio Colunga R
 --%>
 
 <%@page contentType="text/html" language="java"
@@ -15,23 +15,11 @@
     </head>
     <body>
         
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>Boleta</th>
-                    <th>Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>Telefono</th>
-                    <th>Editar</th>
-                    <th>Borrar</th>
-                </tr>        
-            </thead>
-            <tbody>
-                
+        <form method="post" name="editar" action="actualizaralumno.jsp">
             
+
         <%
-            //aqui ya puedo incorporar java
+            //Aquí ya puedo incorporar java
             Connection con = null;
             Statement set = null;
             ResultSet rs = null;
@@ -39,18 +27,23 @@
             String username, url, password, driver;
             
             url = "jdbc:mysql://localhost/alumnos";
-            username= "Alejandro";
+            username = "Alejandro";
             password = "gl0rfInd3#";
+            //username= "root";
+            //password = "n0m3l0";
             
             driver = "com.mysql.jdbc.Driver";
             
             try{
-                //conectarnos
+                //Conectarnos
                 Class.forName(driver);
                 con = DriverManager.getConnection(url, username, password);
                 
                 try{
-                    String q = "select * from alumnosbatiz order by boleta asc";
+                    int id = Integer.parseInt(request.getParameter("id"));
+                    
+                    String q = "select * from alumnosbatiz "
+                            + "where boleta="+id;
                     
                     set = con.createStatement();
                     
@@ -61,15 +54,35 @@
                     
                     
                     %>
-                    <tr>
-                        <td><%=rs.getInt("boleta")%></td>
-                        <td><%=rs.getString("nombre")%></td>
-                        <td><%=rs.getString("appat")%></td>
-                        <td><%=rs.getString("apmat")%></td>
-                        <td><%=rs.getString("telefono")%></td>
-                        <td><a href="editaralumno.jsp?id=<%=rs.getInt("boleta")%>" >Editar</a></td>
-                        <td><a href="borraralumno.jsp?id=<%=rs.getInt("boleta")%>" >Borrar</a></td>
-                    </tr>
+                    <label>Boleta</label>
+                    <br>
+                    <input type="hidden" name="boleta2" 
+                           value="<%=rs.getInt("boleta")%>">
+                    <br>
+                    <label>Nombre</label>
+                    <br>
+                    <input type="text" name="nombre2" 
+                           value="<%=rs.getString("nombre")%>">
+                    <br>
+                    <label>Apellido Paterno</label>
+                    <br>
+                    <input type="text" name="appat2" 
+                           value="<%=rs.getString("appat")%>">
+                    <br>
+                    <label>Apellido Materno</label>
+                    <br>
+                    <input type="text" name="apmat2" 
+                           value="<%=rs.getString("apmat")%>">
+                    <br>
+                    <label>Telefono</label>
+                    <br>
+                    <input type="text" name="tel2" 
+                           value="<%=rs.getString("telefono")%>">
+                    <br>
+                    <input type="submit" value="Actualizar Datos">
+                    <br>
+                    <input type="reset" value="Borrar Datos">
+                    
                     <%
                         }
                 }catch(SQLException es){
@@ -90,8 +103,8 @@
             }
             
             %>
-            </tbody>
-        </table>
+            </form>
+            <br>
             <a href="index.html">Regresar a Principal</a>
             <br>
             <a href="registroalumno.jsp" >Registrar Alumno</a> 
